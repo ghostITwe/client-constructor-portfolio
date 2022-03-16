@@ -1,3 +1,4 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: [
     "./index.html",
@@ -7,6 +8,9 @@ module.exports = {
     extend: {
       backgroundColor: {
         'main-color': '#282828'
+      },
+      fontFamily: {
+        'jetbrains': ['JetBrains Mono', ...defaultTheme.fontFamily.mono]
       }
     },
   },
