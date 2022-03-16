@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{svelte,vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundColor: {
+        'main-color': '#282828'
+      }
+    },
   },
   plugins: [],
 }
