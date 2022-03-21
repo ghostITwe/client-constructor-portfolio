@@ -11,6 +11,9 @@ module.exports = {
       },
       fontFamily: {
         'jetbrains': ['JetBrains Mono', ...defaultTheme.fontFamily.mono]
+      },
+      dropShadow: {
+        'white': '0 0 1px white'
       }
     },
   },
