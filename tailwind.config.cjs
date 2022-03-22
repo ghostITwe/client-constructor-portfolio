@@ -13,7 +13,10 @@ module.exports = {
         'jetbrains': ['JetBrains Mono', ...defaultTheme.fontFamily.mono]
       },
       dropShadow: {
-        'white': '0 0 1px white'
+        'white': [
+          '0 4px 3px rgb(255 255 255 / 0.07)',
+          '0 2px 2px rgb(255 255 255 / 0.6)'
+        ]
       }
     },
   },

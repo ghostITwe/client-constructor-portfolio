@@ -48,18 +48,19 @@
   </p>
   <form class="grid gap-4 max-w-md m-auto mt-24">
     <label for="login"
-           class="before:block before:absolute before:-bottom-1 before:left-0 before:right-0 before:shadow before:shadow-white before:h-px before:bg-white relative inline-block">
-      <input type="text" id="login" placeholder=" Логин"
+           class="px-2 before:block before:absolute before:-bottom-1 before:left-0 before:right-0 before:shadow before:shadow-white before:h-px before:bg-white relative inline-block">
+      <input type="text" id="login" placeholder="Логин"
              class="placeholder-white bg-transparent outline-none placeholder:font-thin text-white w-full">
     </label>
     <label for="password"
-           class="before:block before:absolute before:-bottom-1 before:left-0 before:right-0 before:shadow before:shadow-white before:h-px before:bg-white relative inline-block mt-12">
-      <input type="text" id="password" placeholder=" Пароль"
+           class="px-2 before:block before:absolute before:-bottom-1 before:left-0 before:right-0 before:shadow before:shadow-white before:h-px before:bg-white relative inline-block mt-12">
+      <input type="password" id="password" placeholder="Пароль"
              class="placeholder-white bg-transparent outline-none placeholder:font-thin text-white w-full">
     </label>
-    <label for="remember" class="text-white font-thin ">
-      <input type="checkbox" id="remember" name="remember" class="form-checkbox ml-1">
-      <span>Запомнить меня</span>
+
+    <label for="remember" class="text-white font-thin group">
+      <input type="checkbox" id="remember" name="remember" class="appearance-none align-middle border rounded duration-200 group-hover:shadow group-hover:shadow-white checked:shadow checked:shadow-white checked:bg-white w-4 h-4">
+      <span class="align-middle group-hover:drop-shadow-white duration-200">Запомнить меня</span>
     </label>
     <button
         class="text-white border border-white rounded shadow-sm shadow-white justify-self-center px-8 py-2 hover:bg-white hover:text-black duration-200">
