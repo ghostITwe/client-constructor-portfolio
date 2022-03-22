@@ -1,56 +1,13 @@
-<script lang="ts">
-  import switchTheme from './assets/switch.svg';
+<script>
   import laravelIcon from './assets/images/icon/laravel.svg';
   import svelteIcon from './assets/images/icon/svelte.svg';
   import tailwindCssIcon from './assets/images/icon/tailwindCss.svg';
   import typeScriptIcon from './assets/images/icon/typeScript.svg';
-
-  let logo = '';
-
-  function tick() {
-    setTimeout(() => {
-      logo += 'L';
-    }, 50);
-    setTimeout(() => {
-      logo += 'E';
-    }, 100);
-    setTimeout(() => {
-      logo += 'A';
-    }, 150);
-    setTimeout(() => {
-      logo += 'F';
-    }, 200);
-    setTimeout(() => {
-      logo += 'S';
-    }, 300);
-    setTimeout(() => {
-      logo += 'T';
-    }, 400);
-    setTimeout(() => {
-      logo += 'O';
-    }, 500);
-    setTimeout(() => {
-      logo += 'C';
-    }, 600);
-    setTimeout(() => {
-      logo += 'K';
-    }, 700);
-    setInterval(() => {
-      logo = logo.slice(-1) == '_' ? 'LEAFSTOCK' : 'LEAFSTOCK_';
-    }, 750);
-  }
-  tick();
+  import Header from "./components/Header.svelte";
 </script>
 
 
-<header class="flex justify-between p-4">
-  <a href="#" class="text-2xl text-white font-bold">{logo}</a>
-  <nav class="flex items-center text-white text-xl gap-8">
-    <a href="#" class="font-bold">Текст</a>
-    <a href="#" class="font-bold">Тарифы</a>
-    <a href="#"><img src="{switchTheme}" alt="switchTheme" class="w-8"></a>
-  </nav>
-</header>
+<Header/>
 <main>
   <article class="bg-[#3E3E3E80] backdrop-blur-sm shadow-lg rounded-xl text-center max-w-3xl m-auto my-28">
     <div class="flex items-center justify-evenly gap-10 py-4 px-8 shadow-lg">
@@ -121,3 +78,4 @@
     <button class="text-4xl text-white border-2 border-white py-2.5 px-10 rounded-2xl shadow-md shadow-white hover:bg-[#0019F5] duration-200">Регистрация »</button>
   </article>
 </main>
+<footer></footer>
