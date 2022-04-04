@@ -21,6 +21,9 @@ module.exports = {
       gap: {
         '15': '3.75rem'
       },
+      margin: {
+        '15': '3.75rem'
+      },
       width: {
         '25': '6.25rem'
       }
