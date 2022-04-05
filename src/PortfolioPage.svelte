@@ -34,21 +34,78 @@
   </div>
 </aside>
 <aside class="grid min-h-screen">
-  <section class="grid grid-cols-2">
-    <h3 class="text-white text-lg font-light col-span-2">Текст</h3>
-    <article class="w-32 h-32 grid justify-center border border-white rounded py-6">
+  <section class="grid w-87.5 grid-cols-2 gap-5 content-center">
+    <h3 class="text-white col-span-2 pl-4">Текст</h3>
+    <article class="w-32 h-32 grid justify-center border border-white rounded py-6 m-auto">
       <img src="{rec}" alt="#">
       <p class="text-white text-center pt-2.5">Текст</p>
     </article>
-    <article class="w-32 h-32 grid justify-center border border-white rounded py-6">
+    <article class="w-32 h-32 grid justify-center border border-white rounded py-6 m-auto">
       <img src="{rec}" alt="#">
       <p class="text-white text-center pt-2.5">Текст</p>
     </article>
-    <article class="w-32 h-32 grid justify-center border border-white rounded py-6">
+    <article class="w-32 h-32 grid justify-center border border-white rounded py-6 m-auto">
       <img src="{rec}" alt="#">
       <p class="text-white text-center pt-2.5">Текст</p>
     </article>
-    <article class="w-32 h-32 grid justify-center border border-white rounded py-6">
+    <article class="w-32 h-32 grid justify-center border border-white rounded py-6 m-auto">
+      <img src="{rec}" alt="#">
+      <p class="text-white text-center pt-2.5">Текст</p>
+    </article>
+  </section>
+  <section class="grid w-87.5 grid-cols-2 gap-5 content-center">
+    <h3 class="text-white col-span-2 pl-4">Текст</h3>
+    <article class="w-32 h-32 grid justify-center border border-white rounded py-6 m-auto">
+      <img src="{rec}" alt="#">
+      <p class="text-white text-center pt-2.5">Текст</p>
+    </article>
+    <article class="w-32 h-32 grid justify-center border border-white rounded py-6 m-auto">
+      <img src="{rec}" alt="#">
+      <p class="text-white text-center pt-2.5">Текст</p>
+    </article>
+    <article class="w-32 h-32 grid justify-center border border-white rounded py-6 m-auto">
+      <img src="{rec}" alt="#">
+      <p class="text-white text-center pt-2.5">Текст</p>
+    </article>
+    <article class="w-32 h-32 grid justify-center border border-white rounded py-6 m-auto">
+      <img src="{rec}" alt="#">
+      <p class="text-white text-center pt-2.5">Текст</p>
+    </article>
+  </section>
+  <section class="grid w-87.5 grid-cols-2 gap-5 content-center">
+    <h3 class="text-white col-span-2 pl-4">Текст</h3>
+    <article class="w-32 h-32 grid justify-center border border-white rounded py-6 m-auto">
+      <img src="{rec}" alt="#">
+      <p class="text-white text-center pt-2.5">Текст</p>
+    </article>
+    <article class="w-32 h-32 grid justify-center border border-white rounded py-6 m-auto">
+      <img src="{rec}" alt="#">
+      <p class="text-white text-center pt-2.5">Текст</p>
+    </article>
+    <article class="w-32 h-32 grid justify-center border border-white rounded py-6 m-auto">
+      <img src="{rec}" alt="#">
+      <p class="text-white text-center pt-2.5">Текст</p>
+    </article>
+    <article class="w-32 h-32 grid justify-center border border-white rounded py-6 m-auto">
+      <img src="{rec}" alt="#">
+      <p class="text-white text-center pt-2.5">Текст</p>
+    </article>
+  </section>
+  <section class="grid w-87.5 grid-cols-2 gap-5 content-center">
+    <h3 class="text-white col-span-2 pl-4">Текст</h3>
+    <article class="w-32 h-32 grid justify-center border border-white rounded py-6 m-auto">
+      <img src="{rec}" alt="#">
+      <p class="text-white text-center pt-2.5">Текст</p>
+    </article>
+    <article class="w-32 h-32 grid justify-center border border-white rounded py-6 m-auto">
+      <img src="{rec}" alt="#">
+      <p class="text-white text-center pt-2.5">Текст</p>
+    </article>
+    <article class="w-32 h-32 grid justify-center border border-white rounded py-6 m-auto">
+      <img src="{rec}" alt="#">
+      <p class="text-white text-center pt-2.5">Текст</p>
+    </article>
+    <article class="w-32 h-32 grid justify-center border border-white rounded py-6 m-auto">
       <img src="{rec}" alt="#">
       <p class="text-white text-center pt-2.5">Текст</p>
     </article>
