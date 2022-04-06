@@ -28,18 +28,32 @@
 
 <div class="flex overflow-hidden h-screen">
     <aside class="relative">
-        <section class="relative z-10 bg-main-color grid min-h-screen justify-center content-between gap-10 p-6">
-            <div class="grid gap-10">
-                <a href="#" class="bg-black w-8 h-8 align-middle text-center text-white"><span>{logo}</span></a>
-                <button class="" on:click={toggle}><img src="{templateIcon}" alt="Шаблоны" class="w-8 h-8"></button>
-                <button class=""><img src="{addIcon}" alt="Добавить" class="w-8 h-8"></button>
-                <button class=""><img src="{mediaIcon}" alt="Медия" class="w-8 h-8"></button>
-                <button class=""><img src="{designIcon}" alt="Дизайн" class="w-8 h-8"></button>
-                <button class=""><img src="{adaptiveIcon}" alt="Адаптив" class="w-8 h-8"></button>
+        <section class="relative z-10 bg-main-color grid min-h-screen justify-center content-between gap-2 p-2">
+            <div class="grid gap-1">
+<!--                <a href="#" class="p-4 bg-black w-8 h-8 align-middle text-center text-white"><span>{logo}</span></a>-->
+                <button class="p-4 border-transparent border-y duration-150 hover:border-white" on:click={toggle}>
+                    <img src="{templateIcon}" alt="Шаблоны" class="w-8 h-8">
+                </button>
+                <button class="p-4 border-transparent border-y duration-150 hover:border-white">
+                  <img src="{addIcon}" alt="Добавить" class="w-8 h-8">
+                </button>
+                <button class="p-4 border-transparent border-y duration-150 hover:border-white">
+                  <img src="{mediaIcon}" alt="Медия" class="w-8 h-8">
+                </button>
+                <button class="p-4 border-transparent border-y duration-150 hover:border-white">
+                  <img src="{designIcon}" alt="Дизайн" class="w-8 h-8">
+                </button>
+                <button class="p-4 border-transparent border-y duration-150 hover:border-white">
+                  <img src="{adaptiveIcon}" alt="Адаптив" class="w-8 h-8">
+                </button>
             </div>
-            <div class="grid gap-10">
-                <button><img src="{viewIcon}" alt="Просмотр" class="w-8 h-8"></button>
-                <button class="flex justify-center items-center"><img src="{saveIcon}" alt="Сохранить" class="w-8 h-8"></button>
+            <div class="grid gap-1">
+                <button class="p-4 border-transparent border-y duration-150 hover:border-white">
+                  <img src="{viewIcon}" alt="Просмотр" class="w-8 h-8">
+                </button>
+                <button class="p-4 border-transparent border-y duration-150 hover:border-white flex justify-center items-center">
+                  <img src="{saveIcon}" alt="Сохранить" class="w-8 h-8">
+                </button>
             </div>
         </section>
         <section id="toolbar" class="grid h-screen border-l-2 p-6 pl-8 gap-6 duration-200 overflow-y-scroll no-scrollbar backdrop-blur-md bg-main-color/90 absolute left-full top-0 transform">
