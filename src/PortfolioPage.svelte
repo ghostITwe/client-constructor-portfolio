@@ -31,27 +31,60 @@
         <section class="relative z-10 bg-main-color grid min-h-screen justify-center content-between gap-2 p-2">
             <div class="grid gap-1">
 <!--                <a href="#" class="p-4 bg-black w-8 h-8 align-middle text-center text-white"><span>{logo}</span></a>-->
-                <button class="p-4 border-transparent border-y duration-150 hover:border-white" on:click={toggle}>
+                <button after="Шаблоны" class="p-4 relative border-transparent border-y duration-150
+                hover:border-white
+                hover:after:left-full hover:after:p-2 hover:after:text-sm hover:after:top-1/2 hover:after:-translate-y-1/2
+                hover:after:block hover:after:absolute hover:after:bg-white hover:after:rounded hover:after:content-[attr(after)]
+                hover:before:bg-white hover:before:block hover:before:absolute hover:before:left-full hover:before:w-3
+                hover:before:h-3 hover:before:rotate-45 hover:before:top-1/2 hover:before:-translate-y-1/2 hover:before:-translate-x-1/2" on:click={toggle}>
                     <img src="{templateIcon}" alt="Шаблоны" class="w-8 h-8">
                 </button>
-                <button class="p-4 border-transparent border-y duration-150 hover:border-white">
+                <button after="Добавить" class="p-4 border-transparent border-y duration-150 relative
+                hover:border-white
+                hover:after:left-full hover:after:p-2 hover:after:text-sm hover:after:top-1/2 hover:after:-translate-y-1/2
+                hover:after:block hover:after:absolute hover:after:bg-white hover:after:rounded hover:after:content-[attr(after)]
+                hover:before:bg-white hover:before:block hover:before:absolute hover:before:left-full hover:before:w-3
+                hover:before:h-3 hover:before:rotate-45 hover:before:top-1/2 hover:before:-translate-y-1/2 hover:before:-translate-x-1/2">
                   <img src="{addIcon}" alt="Добавить" class="w-8 h-8">
                 </button>
-                <button class="p-4 border-transparent border-y duration-150 hover:border-white">
+                <button after="Медия" class="p-4 border-transparent border-y duration-150 relative
+                hover:border-white
+                hover:after:left-full hover:after:p-2 hover:after:text-sm hover:after:top-1/2 hover:after:-translate-y-1/2
+                hover:after:block hover:after:absolute hover:after:bg-white hover:after:rounded hover:after:content-[attr(after)]
+                hover:before:bg-white hover:before:block hover:before:absolute hover:before:left-full hover:before:w-3
+                hover:before:h-3 hover:before:rotate-45 hover:before:top-1/2 hover:before:-translate-y-1/2 hover:before:-translate-x-1/2">
                   <img src="{mediaIcon}" alt="Медия" class="w-8 h-8">
                 </button>
-                <button class="p-4 border-transparent border-y duration-150 hover:border-white">
+                <button after="Дизайн" class="p-4 border-transparent border-y duration-150 relative
+                hover:border-white
+                hover:after:left-full hover:after:p-2 hover:after:text-sm hover:after:top-1/2 hover:after:-translate-y-1/2
+                hover:after:block hover:after:absolute hover:after:bg-white hover:after:rounded hover:after:content-[attr(after)]
+                hover:before:bg-white hover:before:block hover:before:absolute hover:before:left-full hover:before:w-3
+                hover:before:h-3 hover:before:rotate-45 hover:before:top-1/2 hover:before:-translate-y-1/2 hover:before:-translate-x-1/2">
                   <img src="{designIcon}" alt="Дизайн" class="w-8 h-8">
                 </button>
-                <button class="p-4 border-transparent border-y duration-150 hover:border-white">
+                <button after="Адаптив" class="p-4 border-transparent border-y duration-150 relative
+                hover:border-white
+                hover:after:left-full hover:after:p-2 hover:after:text-sm hover:after:top-1/2 hover:after:-translate-y-1/2
+                hover:after:block hover:after:absolute hover:after:bg-white hover:after:rounded hover:after:content-[attr(after)]
+                hover:before:bg-white hover:before:block hover:before:absolute hover:before:left-full hover:before:w-3
+                hover:before:h-3 hover:before:rotate-45 hover:before:top-1/2 hover:before:-translate-y-1/2 hover:before:-translate-x-1/2">
                   <img src="{adaptiveIcon}" alt="Адаптив" class="w-8 h-8">
                 </button>
             </div>
             <div class="grid gap-1">
-                <button class="p-4 border-transparent border-y duration-150 hover:border-white">
+                <button after="Просмотр" class="p-4 border-transparent border-y duration-150 relative hover:border-white
+                hover:after:left-full hover:after:p-2 hover:after:text-sm hover:after:top-1/2 hover:after:-translate-y-1/2
+                hover:after:block hover:after:absolute hover:after:bg-white hover:after:rounded hover:after:content-[attr(after)]
+                hover:before:bg-white hover:before:block hover:before:absolute hover:before:left-full hover:before:w-3
+                hover:before:h-3 hover:before:rotate-45 hover:before:top-1/2 hover:before:-translate-y-1/2 hover:before:-translate-x-1/2">
                   <img src="{viewIcon}" alt="Просмотр" class="w-8 h-8">
                 </button>
-                <button class="p-4 border-transparent border-y duration-150 hover:border-white flex justify-center items-center">
+                <button after="Сохранить" class="p-4 border-transparent border-y duration-150 relative hover:border-white flex justify-center items-center
+                hover:after:left-full hover:after:p-2 hover:after:text-sm hover:after:top-1/2 hover:after:-translate-y-1/2
+                hover:after:block hover:after:absolute hover:after:bg-white hover:after:rounded hover:after:content-[attr(after)]
+                hover:before:bg-white hover:before:block hover:before:absolute hover:before:left-full hover:before:w-3
+                hover:before:h-3 hover:before:rotate-45 hover:before:top-1/2 hover:before:-translate-y-1/2 hover:before:-translate-x-1/2">
                   <img src="{saveIcon}" alt="Сохранить" class="w-8 h-8">
                 </button>
             </div>
