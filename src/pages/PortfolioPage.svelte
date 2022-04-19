@@ -1,6 +1,6 @@
 <script>
-    import Img from "./assets/123.jpg";
-    import Sidebar from "./components/Sidebar.svelte";
+    import Img from "$assets/123.jpg";
+    import Sidebar from "$lib/components/Sidebar.svelte";
 
     let logo = 'LS';
 

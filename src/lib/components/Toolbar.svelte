@@ -1,5 +1,5 @@
 <script>
-    import rec from "../assets/images/rec.svg";
+    import rec from "../../assets/images/rec.svg";
 </script>
 <section id="toolbar"
          class="grid h-screen border-l-2 p-6 pl-8 gap-6 duration-200 overflow-y-scroll no-scrollbar backdrop-blur-md bg-main-color/90 absolute left-full top-0 transform">

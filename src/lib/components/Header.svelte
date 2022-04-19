@@ -1,5 +1,5 @@
 <script>
-    import switchThemeIcon from '../assets/switch.svg';
+    import switchThemeIcon from '../../assets/switch.svg';
 
     export let type;
     let logo = '';

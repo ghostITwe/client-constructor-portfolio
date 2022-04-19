@@ -1,14 +1,14 @@
 <script lang="ts">
     import Toolbar from "./Toolbar.svelte";
     import ToolNavigation from "./ToolNavigation.svelte";
-    import templateIcon from "../assets/images/icon/toolbarIcon/templateIcon.svg";
-    import addIcon from "../assets/images/icon/toolbarIcon/addIcon.svg";
-    import mediaIcon from "../assets/images/icon/toolbarIcon/mediaIcon.svg";
-    import designIcon from "../assets/images/icon/toolbarIcon/designIcon.svg";
-    import adaptiveIcon from "../assets/images/icon/toolbarIcon/adaptiveIcon.svg";
-    import viewIcon from "../assets/images/icon/toolbarIcon/viewIcon.svg";
-    import saveIcon from "../assets/images/icon/toolbarIcon/saveIcon.svg";
-    import type { toolLink } from "../lib/interfaces/ToolLink";
+    import templateIcon from "$assets/images/icon/toolbarIcon/templateIcon.svg";
+    import addIcon from "$assets/images/icon/toolbarIcon/addIcon.svg";
+    import mediaIcon from "$assets/images/icon/toolbarIcon/mediaIcon.svg";
+    import designIcon from "$assets/images/icon/toolbarIcon/designIcon.svg";
+    import adaptiveIcon from "$assets/images/icon/toolbarIcon/adaptiveIcon.svg";
+    import viewIcon from "$assets/images/icon/toolbarIcon/viewIcon.svg";
+    import saveIcon from "$assets/images/icon/toolbarIcon/saveIcon.svg";
+    import type { toolLink } from "$lib/interfaces/ToolLink";
 
     function toggle() {
         const toolbar = document.getElementById('toolbar');

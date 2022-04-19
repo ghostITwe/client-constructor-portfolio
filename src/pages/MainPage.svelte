@@ -1,9 +1,9 @@
 <script>
-  import laravelIcon from './assets/images/icon/laravel.svg';
-  import svelteIcon from './assets/images/icon/svelte.svg';
-  import tailwindCssIcon from './assets/images/icon/tailwindCss.svg';
-  import typeScriptIcon from './assets/images/icon/typeScript.svg';
-  import Header from "./components/Header.svelte";
+  import laravelIcon from '$assets/images/icon/laravel.svg';
+  import svelteIcon from '$assets/images/icon/svelte.svg';
+  import tailwindCssIcon from '$assets/images/icon/tailwindCss.svg';
+  import typeScriptIcon from '$assets/images/icon/typeScript.svg';
+  import Header from "$lib/components/Header.svelte";
 </script>
 
 

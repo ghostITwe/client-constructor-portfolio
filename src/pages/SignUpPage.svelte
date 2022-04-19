@@ -1,9 +1,9 @@
 <script>
-  import Form from "./components/Form.svelte";
-  import Field from "./components/Field.svelte";
-  import Button from "./components/Button.svelte";
-  import Link from "./components/Link.svelte";
-  import Header from "./components/Header.svelte";
+  import Form from "$lib/components/Form.svelte";
+  import Field from "$lib/components/Field.svelte";
+  import Button from "$lib/components/Button.svelte";
+  import Link from "$lib/components/Link.svelte";
+  import Header from "$lib/components/Header.svelte";
 </script>
 
 <Header type="cut"/>
