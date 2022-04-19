@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import Form from "./components/Form.svelte";
   import Field from "./components/Field.svelte";
   import Button from "./components/Button.svelte";

@@ -10,17 +10,17 @@
     import IconButton from "./IconButton.svelte";
 
     export let toolLinks;
-
-    const logo = 'LS';
 </script>
 
-<!--<a href="#" class="p-4 bg-black w-8 h-8 align-middle text-center text-white"><span>{logo}</span></a>-->
-<section class="relative z-10 bg-main-color grid min-h-screen min-w-max justify-center content-between gap-2 p-2">
-    {#each toolLinks as groupToolLinks}
-        <div class="grid gap-1">
-            {#each groupToolLinks as {src, alt, after, onclick}}
-                <IconButton {after} {alt} {src} {onclick}/>
-            {/each}
-        </div>
-    {/each}
+<section class="relative z-10 bg-main-color flex flex-col min-h-screen min-w-max items-center gap-2 p-2">
+    <a href="#" class="p-1 text-3xl font-bold bg-black align-middle text-center text-white">L<span class="bg-white text-black leading-6 inline-block">S</span></a>
+    <section class="flex-grow grid justify-center content-between gap-2">
+        {#each toolLinks as groupToolLinks}
+            <div class="grid gap-1">
+                {#each groupToolLinks as {src, alt, after, onclick}}
+                    <IconButton {after} {alt} {src} {onclick}/>
+                {/each}
+            </div>
+        {/each}
+    </section>
 </section>
