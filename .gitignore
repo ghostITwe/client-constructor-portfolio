@@ -3,4 +3,5 @@
 /.vscode/
 .DS_Store
 /.idea
+/.svelte-kit
 package-lock.json

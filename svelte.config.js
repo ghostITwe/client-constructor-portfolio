@@ -1,7 +1,21 @@
-import sveltePreprocess from 'svelte-preprocess'
+import adapter from "@sveltejs/adapter-auto";
+import preprocess from "svelte-preprocess";
+import path from "path";
 
-export default {
-  // Consult https://github.com/sveltejs/svelte-preprocess
-  // for more information about preprocessors
-  preprocess: sveltePreprocess()
-}
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+  preprocess: [preprocess({})],
+
+  kit: {
+    adapter: adapter(),
+    vite: {
+      resolve: {
+        alias: {
+          '$assets': path.resolve('./assets'),
+        }
+      }
+    }
+  }
+};
+
+export default config;

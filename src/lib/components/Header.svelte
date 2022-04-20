@@ -1,5 +1,4 @@
 <script>
-    import switchThemeIcon from '../../assets/switch.svg';
 
     export let type;
     let logo = '';
@@ -46,7 +45,7 @@
     <nav class="flex items-center text-white text-xl gap-8">
       <a href="#" class="font-bold">Текст</a>
       <a href="#" class="font-bold">Тарифы</a>
-      <a href="#"><img src={switchThemeIcon} alt="switchTheme" class="w-8"></a>
+      <a href="#"><img src="assets/switch.svg" alt="switchTheme" class="w-8"></a>
     </nav>
   {/if}
 </header>

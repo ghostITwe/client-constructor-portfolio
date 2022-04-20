@@ -1,12 +1,12 @@
 <script>
-    import negativeViewIcon from "../../assets/images/icon/toolbarIcon/negativeViewIcon.svg";
-    import negativeSaveIcon from "../../assets/images/icon/toolbarIcon/negativeSaveIcon.svg";
-    import negativeMediaIcon from "../../assets/images/icon/toolbarIcon/negativeMediaIcon.svg";
-    import negativeTemplateIcon from "../../assets/images/icon/toolbarIcon/negativeTemplateIcon.svg";
-    import negativeDesignIcon from "../../assets/images/icon/toolbarIcon/negativeDesignIcon.svg";
-    import negativeAdaptiveIcon from "../../assets/images/icon/toolbarIcon/negativeAdaptiveIcon.svg";
-    import negativeAddIcon from "../../assets/images/icon/toolbarIcon/negativeAddIcon.svg";
-    import IconButton from "./IconButton.svelte";
+    // import negativeViewIcon from "../../assets/images/icon/toolbarIcon/negativeViewIcon.svg";
+    // import negativeSaveIcon from "../../assets/images/icon/toolbarIcon/negativeSaveIcon.svg";
+    // import negativeMediaIcon from "../../assets/images/icon/toolbarIcon/negativeMediaIcon.svg";
+    // import negativeTemplateIcon from "../../assets/images/icon/toolbarIcon/negativeTemplateIcon.svg";
+    // import negativeDesignIcon from "../../assets/images/icon/toolbarIcon/negativeDesignIcon.svg";
+    // import negativeAdaptiveIcon from "../../assets/images/icon/toolbarIcon/negativeAdaptiveIcon.svg";
+    // import negativeAddIcon from "../../assets/images/icon/toolbarIcon/negativeAddIcon.svg";
+    import IconButton from "$lib/components/IconButton.svelte";
 
     export let toolLinks;
 </script>

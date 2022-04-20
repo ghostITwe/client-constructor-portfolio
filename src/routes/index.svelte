@@ -1,14 +1,14 @@
+<svelte:head>
+  <title>LeafStock</title>
+</svelte:head>
+
 <script>
-  import laravelIcon from '$assets/images/icon/laravel.svg';
-  import svelteIcon from '$assets/images/icon/svelte.svg';
-  import tailwindCssIcon from '$assets/images/icon/tailwindCss.svg';
-  import typeScriptIcon from '$assets/images/icon/typeScript.svg';
-  import Header from "$lib/components/Header.svelte";
+    import Header from "$lib/components/Header.svelte";
 </script>
 
 
 <Header/>
-<main>
+<main class="font-jetbrains grow">
   <article class="bg-[#3E3E3E80] backdrop-blur-sm shadow-lg rounded-xl text-center max-w-3xl m-auto my-28">
     <div class="flex items-center justify-evenly gap-10 py-4 px-8 shadow-lg">
       <div class="flex items-center gap-2">
@@ -23,7 +23,7 @@
   </article>
   <section class="grid text-white max-w-screen-2xl m-auto gap-60">
     <article class="grid grid-cols-2 items-center">
-      <img src="{laravelIcon}" alt="laravel" class="w-80 h-80">
+      <img src="/assets/images/icon/laravel.svg" alt="laravel" class="w-80 h-80">
       <article>
         <h3 class="text-3xl font-bold mb-4 ">
           Laravel — это фреймворк для
@@ -36,7 +36,7 @@
       </article>
     </article>
     <article class="grid grid-cols-2 items-center">
-      <img src="{svelteIcon}" alt="svelte" class="w-80 h-80">
+      <img src="/assets/images/icon/svelte.svg" alt="svelte" class="w-80 h-80">
       <article>
         <h3 class="text-3xl font-bold mb-4">
           Svelte. Радикальный подход к созданию пользовательских интерфейсов
@@ -55,7 +55,7 @@
           Основанный на JavaScript, предоставляющий вам лучшие инструменты в любом масштабе
         </p>
       </article>
-      <img src="{typeScriptIcon}" alt="typescript" class="w-80 h-80 justify-self-end">
+      <img src="/assets/images/icon/tailwindCss.svg" alt="typescript" class="w-80 h-80 justify-self-end">
     </article>
     <article class="grid grid-cols-2 items-center">
       <article>
@@ -67,7 +67,7 @@
           text-center и rotate-90, которые можно скомпоновать для создания любого дизайна прямо в вашей разметке
         </p>
       </article>
-      <img src="{tailwindCssIcon}" alt="tailwindcss" class="w-80 h-80 justify-self-end">
+      <img src="/assets/images/icon/typeScript.svg" alt="tailwindcss" class="w-80 h-80 justify-self-end">
     </article>
   </section>
   <article class="m-auto text-center my-60">
@@ -78,4 +78,6 @@
     <button class="text-4xl text-white border-2 border-white py-2.5 px-10 rounded-2xl shadow-md shadow-white hover:bg-[#0019F5] duration-200">Регистрация »</button>
   </article>
 </main>
-<footer></footer>
+<footer class="p-4 bg-[#464646] mt-12">
+  <p class="text-white text-center text-xl font-thin">© 2022 LEAFSTOCK</p>
+</footer>
