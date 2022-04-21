@@ -44,5 +44,5 @@
 
 <aside class="relative">
     <ToolNavigation {toolLinks}/>
-    <Toolbar {content}/>
+    <Toolbar bind:content={content}/>
 </aside>
