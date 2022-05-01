@@ -38,11 +38,9 @@
             src: "/assets/images/icon/toolbarIcon/saveIcon.svg",
             after: 'Сохранить'
         }]];
-
-    export let content;
 </script>
 
 <aside class="relative">
     <ToolNavigation {toolLinks}/>
-    <Toolbar bind:content={content}/>
+    <Toolbar/>
 </aside>
