@@ -2,6 +2,7 @@
     import Paragraph from "$lib/components/blocks/Paragraph.svelte";
     import { content } from "$lib/stores.js";
     import Header from "$lib/components/blocks/Header.svelte";
+    import Link from "$lib/components/blocks/Link.svelte";
 
     function addBlock(component) {
         $content[$content.length] = {
@@ -29,7 +30,12 @@
         }, {
             img: "/assets/images/rec.svg",
             name: "Цитата",
-        },
+        }, {
+            img: "/assets/images/rec.svg",
+            name: 'Ссылка',
+            component: Link,
+            onclick: addBlock
+        }
     ];
 </script>
 

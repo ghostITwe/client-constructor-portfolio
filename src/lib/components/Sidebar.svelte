@@ -16,7 +16,8 @@
         }, {
             alt: 'Добавить',
             src: "/assets/images/icon/toolbarIcon/addIcon.svg",
-            after: 'Добавить'
+            after: 'Добавить',
+            onclick: toggle
         }, {
             alt: 'Медия',
             src: "/assets/images/icon/toolbarIcon/mediaIcon.svg",
