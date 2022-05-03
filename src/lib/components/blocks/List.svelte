@@ -6,6 +6,6 @@
 
 <svelte:element this={props?.type ?? 'ul'}>
   {#each props.items as item}
-    <ListItem props={item.text}/>
+    <ListItem props={item}/>
   {/each}
 </svelte:element>
