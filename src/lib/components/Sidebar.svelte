@@ -2,6 +2,8 @@
     import Toolbar from "./Toolbar.svelte";
     import ToolNavigation from "./ToolNavigation.svelte";
     import type { toolLink } from "$lib/interfaces/ToolLink";
+    import Editbar from "$lib/components/Editbar.svelte";
+    import { content } from "$lib/stores";
 
     function toggle() {
         const toolbar = document.getElementById('toolbar');
@@ -39,9 +41,22 @@
             src: "/assets/images/icon/toolbarIcon/saveIcon.svg",
             after: 'Сохранить'
         }]];
+
+    let bar = {
+        component: Editbar,
+        props: {
+            text: $content[0].props.text
+        }
+    }
 </script>
 
 <aside class="relative">
     <ToolNavigation {toolLinks}/>
-    <Toolbar/>
+    <section id="toolbar"
+             class="grid h-screen border-l-2 p-6 pl-8 gap-6 duration-200 overflow-y-scroll no-scrollbar
+         backdrop-blur-md bg-main-color/90 absolute left-full top-0 transform content-start">
+<!--        <svelte:component this={bar.component} props={bar.props}></svelte:component>-->
+<!--        <Toolbar/>-->
+        <Editbar props={bar.props.text}/>
+    </section>
 </aside>

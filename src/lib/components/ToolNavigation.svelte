@@ -11,7 +11,7 @@
     export let toolLinks;
 </script>
 
-<section class="relative z-10 bg-main-color flex flex-col min-h-screen min-w-max items-center gap-2 p-2">
+<section class="relative z-10 bg-main-color flex flex-col min-h-screen min-w-max items-center gap-2 p-2 ">
     <a href="#" class="p-1 text-3xl font-bold bg-black align-middle text-center text-white">L<span class="bg-white text-black leading-6 inline-block">S</span></a>
     <section class="flex-grow grid justify-center content-between gap-2">
         {#each toolLinks as groupToolLinks}

@@ -7,7 +7,7 @@
 
 <div class="flex overflow-hidden h-screen">
     <Sidebar/>
-    <main class="overflow-y-auto w-full">
+    <main class="overflow-y-auto w-full bg-white">
         {#each $content as {component, props, index}}
             <svelte:component this={component} {props}/>
         {/each}

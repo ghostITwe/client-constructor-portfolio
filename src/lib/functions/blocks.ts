@@ -1,15 +1,27 @@
-import { cnt, content } from '$lib/stores';
+import { content } from '$lib/stores';
 
-export function addBlock() {
-  // let e = {
-  //   component: component,
-  //   props: {
-  //     text: 'test'
-  //   }
-  // }
-  // // @ts-ignore
-  // content.update(el => { return el.push(e)} );
-  console.log(cnt);
-  cnt.update(n => n * 2);
-  console.log(cnt);
+export function addBlock(component) {
+    content.update(content => [...content, {
+        index: 0,
+        component: component,
+        props: {
+            text: 'test'
+        }
+    }]);
 }
+
+export function removeBlock(index) {
+    content.update(content => {
+        content.splice(index, 1);
+        return content;
+    });
+}
+
+// export function editBlock(index) {
+//     content.update(content => {
+//         content[index].props = {
+//
+//         };
+//         return content;
+//     })
+// }
