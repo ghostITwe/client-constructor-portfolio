@@ -1,23 +1,17 @@
 <script>
-    // import negativeViewIcon from "../../assets/images/icon/toolbarIcon/negativeViewIcon.svg";
-    // import negativeSaveIcon from "../../assets/images/icon/toolbarIcon/negativeSaveIcon.svg";
-    // import negativeMediaIcon from "../../assets/images/icon/toolbarIcon/negativeMediaIcon.svg";
-    // import negativeTemplateIcon from "../../assets/images/icon/toolbarIcon/negativeTemplateIcon.svg";
-    // import negativeDesignIcon from "../../assets/images/icon/toolbarIcon/negativeDesignIcon.svg";
-    // import negativeAdaptiveIcon from "../../assets/images/icon/toolbarIcon/negativeAdaptiveIcon.svg";
-    // import negativeAddIcon from "../../assets/images/icon/toolbarIcon/negativeAddIcon.svg";
     import IconButton from "$lib/components/IconButton.svelte";
 
     export let toolLinks;
 </script>
 
-<section class="relative z-10 bg-main-color flex flex-col min-h-screen min-w-max items-center gap-2 p-2 ">
-    <a href="#" class="p-1 text-3xl font-bold bg-black align-middle text-center text-white">L<span class="bg-white text-black leading-6 inline-block">S</span></a>
+<section class="relative z-20 bg-main-color flex flex-col min-h-screen items-center gap-2 p-2 ">
+<!--  FIXME: заменить тень на логотипе  -->
+    <a href="#" class="p-1 text-3xl font-bold bg-black align-middle text-center text-white shadow-[0_3px_5px_rgba(0_0_0_/_0.5)]">L<span class="bg-white text-black leading-6 inline-block">S</span></a>
     <section class="flex-grow grid justify-center content-between gap-2">
         {#each toolLinks as groupToolLinks}
             <div class="grid gap-1">
-                {#each groupToolLinks as {src, alt, after, onclick}}
-                    <IconButton {after} {alt} {src} {onclick}/>
+                {#each groupToolLinks as toolLink}
+                    <IconButton {...toolLink}/>
                 {/each}
             </div>
         {/each}
