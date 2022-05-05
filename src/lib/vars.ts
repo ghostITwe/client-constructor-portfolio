@@ -4,29 +4,29 @@ import { toggle } from '$lib/functions/sidebar';
 export const toolLinks: toolLink[][] = [[{
   alt: 'Шаблоны',
   src: '/assets/images/icon/toolbarIcon/templateIcon.svg',
-  negative: '',
+  negative: '/assets/images/icon/toolbarIcon/negativeTemplateIcon.svg',
   after: 'Шаблоны',
   onclick: toggle
 }, {
   alt: 'Добавить',
   src: '/assets/images/icon/toolbarIcon/addIcon.svg',
-  negative: '',
+  negative: '/assets/images/icon/toolbarIcon/negativeAddIcon.svg',
   after: 'Добавить',
   onclick: toggle
 }, {
   alt: 'Медия',
   src: '/assets/images/icon/toolbarIcon/mediaIcon.svg',
-  negative: '',
+  negative: '/assets/images/icon/toolbarIcon/negativeMediaIcon.svg',
   after: 'Медия'
 }, {
   alt: 'Дизайн',
   src: '/assets/images/icon/toolbarIcon/designIcon.svg',
-  negative: '',
+  negative: '/assets/images/icon/toolbarIcon/negativeDesignIcon.svg',
   after: 'Дизайн'
 }, {
   alt: 'Адаптив',
   src: '/assets/images/icon/toolbarIcon/adaptiveIcon.svg',
-  negative: '',
+  negative: '/assets/images/icon/toolbarIcon/negativeAdaptiveIcon.svg',
   after: 'Адаптив'
 }], [{
   alt: 'Просмотр',
@@ -36,6 +36,6 @@ export const toolLinks: toolLink[][] = [[{
 }, {
   alt: 'Сохранить',
   src: '/assets/images/icon/toolbarIcon/saveIcon.svg',
-  negative: '',
+  negative: '/assets/images/icon/toolbarIcon/negativeSaveIcon.svg',
   after: 'Сохранить'
 }]];

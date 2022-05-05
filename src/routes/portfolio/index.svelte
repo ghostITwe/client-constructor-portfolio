@@ -5,7 +5,7 @@
 <script>
     import Sidebar from "$lib/components/Sidebar.svelte";
 
-    import {cnt, content} from "$lib/stores.js";
+    import { content } from "$lib/stores.js";
 
     let logo = 'LS';
 </script>

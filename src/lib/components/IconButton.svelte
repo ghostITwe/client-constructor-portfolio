@@ -19,11 +19,11 @@
     }
 
     .iconBtn:hover:after {
-        @apply left-[130%] p-2 text-sm top-1/2 -translate-y-1/2 block absolute bg-white rounded-xl content-[attr(after)];
+        @apply left-[130%] p-2 text-sm top-1/2 -translate-y-1/2 block absolute bg-white rounded-xl content-[attr(after)] shadow-[0_0_6px_rgba(0_0_0/_0.25)];
     }
 
     .iconBtn:hover:before {
-        @apply content-[''] bg-white block absolute left-[130%] w-3 h-3 rotate-45 top-1/2 -translate-y-1/2 -translate-x-1/2;
+        @apply content-[''] bg-white block absolute left-[130%] w-3 h-3 rotate-45 top-1/2 -translate-y-1/2 -translate-x-1/2 shadow-[0_0_6px_rgba(0_0_0/_0.25)];
     }
 
     .iconBtn img {
