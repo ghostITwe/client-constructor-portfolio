@@ -1,5 +1,12 @@
 import type { toolLink } from '$lib/interfaces/ToolLink';
 import { toggle } from '$lib/functions/sidebar';
+import Paragraph from '$lib/components/blocks/Paragraph.svelte';
+import { addBlock } from '$lib/functions/blocks';
+import Header from '$lib/components/blocks/Header.svelte';
+import Link from '$lib/components/blocks/Link.svelte';
+import { bar } from '$lib/stores';
+import Editbar from '$lib/components/Editbar.svelte';
+import Toolbar from '$lib/components/Toolbar.svelte';
 
 export const toolLinks: toolLink[][] = [[{
   alt: 'Шаблоны',
@@ -12,7 +19,14 @@ export const toolLinks: toolLink[][] = [[{
   src: '/assets/images/icon/toolbarIcon/addIcon.svg',
   negative: '/assets/images/icon/toolbarIcon/negativeAddIcon.svg',
   after: 'Добавить',
-  onclick: toggle
+  onclick: () => {
+    toggle();
+    bar.update(bar => {
+      return {
+        component: Toolbar,
+      };
+    });
+  }
 }, {
   alt: 'Медия',
   src: '/assets/images/icon/toolbarIcon/mediaIcon.svg',
@@ -39,3 +53,34 @@ export const toolLinks: toolLink[][] = [[{
   negative: '/assets/images/icon/toolbarIcon/negativeSaveIcon.svg',
   after: 'Сохранить'
 }]];
+
+
+export const toolItems = [
+  {
+    name: 'Добавить',
+    items: [
+      {
+        img: "/assets/images/rec.svg",
+        name: "Абзац",
+        component: Paragraph,
+        onclick: addBlock
+      }, {
+        img: "/assets/images/rec.svg",
+        name: "Список",
+      }, {
+        img: "/assets/images/rec.svg",
+        name: "Заголовок",
+        component: Header,
+        onclick: addBlock
+      }, {
+        img: "/assets/images/rec.svg",
+        name: "Цитата",
+      }, {
+        img: "/assets/images/rec.svg",
+        name: 'Ссылка',
+        component: Link,
+        onclick: addBlock
+      }
+    ]
+  },
+];

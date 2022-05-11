@@ -43,8 +43,6 @@
   <a href="#" class="text-2xl text-white font-bold ml-32">{logo}</a>
   {#if type !== 'cut'}
     <nav class="flex items-center text-white text-xl gap-8">
-      <a href="#" class="font-bold">Текст</a>
-      <a href="#" class="font-bold">Тарифы</a>
       <a href="#"><img src="assets/switch.svg" alt="switchTheme" class="w-8"></a>
     </nav>
   {/if}

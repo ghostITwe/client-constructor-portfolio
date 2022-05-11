@@ -7,6 +7,10 @@
 
     import { content } from "$lib/stores.js";
 
+    function getEditBar() {
+        console.log(123);
+    }
+
     let logo = 'LS';
 </script>
 
@@ -15,7 +19,7 @@
     <Sidebar/>
     <main class="overflow-y-auto w-full bg-white">
         {#each $content as {component, props, index}}
-            <svelte:component this={component} {props}/>
+            <svelte:component this={component} {props} />
         {/each}
     </main>
 </div>
