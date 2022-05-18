@@ -6,7 +6,7 @@ export function addBlock(component) {
 
   content.update(content => [...content, {
     index: index,
-    componentName: '',
+    name: 'paragraph',
     component: component,
     props: {
       text: 'test'

@@ -8,11 +8,13 @@
       }
     }
   }
+
+  console.log($content[$bar.index]);
 </script>
 
 <section class="grid w-80 grid-cols-2 gap-5">
 
-  <!--        <h3 class="text-white col-span-2 pl-4">{componentProps[]?.text.name ?? ''}</h3>-->
+  <h3 class="text-white col-span-2 pl-4">{componentProps[$content[$bar.index]]?.text.name ?? ''}</h3>
   <input type="text" bind:value={$content[$bar.index].props.text}>
 
 </section>

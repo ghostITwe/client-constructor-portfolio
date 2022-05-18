@@ -22,6 +22,7 @@
       <svelte:component this={$bar.component}/>
     </div>
 
+<!--  TODO: сделать изменение кнопки при клике  -->
     <button class="absolute left-full top-1/2 transform -translate-y-1/2" on:click={() => {
             toggle();
             $bar.component = Toolbar;

@@ -1,8 +1,11 @@
 <script>
   import { bar } from '$lib/stores';
   import { toggle } from '$lib/functions/sidebar';
+  import Toolbar from '$lib/components/Toolbar.svelte';
 
-  export let after, src, alt, negative,
+  export let after, img, negative,
+      src = img.src,
+      alt = img.alt,
       onclick = '';
 </script>
 

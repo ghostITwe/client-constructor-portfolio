@@ -1,5 +1,5 @@
 <script>
-  import { toolLinks } from '$lib/vars';
+  import { toolsLinks } from '$lib/vars';
   import IconButton from '$lib/components/IconButton.svelte';
 </script>
 
@@ -9,7 +9,7 @@
      class="p-1 text-3xl font-bold bg-black align-middle text-center text-white shadow-[0_3px_5px_rgba(0_0_0_/_0.5)]">L<span
       class="bg-white text-black leading-6 inline-block">S</span></a>
   <section class="flex-grow grid justify-center content-between gap-2">
-    {#each toolLinks as groupToolLinks}
+    {#each toolsLinks as groupToolLinks}
       <div class="grid gap-1">
         {#each groupToolLinks as toolLink}
           <IconButton {...toolLink}/>
