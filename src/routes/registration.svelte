@@ -10,7 +10,8 @@
 <main class="max-w-screen-sm m-auto mt-24">
   <h1 class="text-white text-6xl font-bold text-center">Новый аккаунт</h1>
   <p class="text-white text-center font-bold mt-5 text-2xl">
-    У вас уже есть аккаунт? <Link>Войти</Link>
+    У вас уже есть аккаунт?
+    <Link>Войти</Link>
   </p>
   <Form>
     <Field id="email" placeholder="Эл.почта" type="text"/>

@@ -11,7 +11,8 @@
 <main class="max-w-screen-sm m-auto mt-24">
   <h1 class="text-white text-6xl font-bold text-center">Вход</h1>
   <p class="text-white text-center font-bold mt-5 text-2xl">
-    Ещё нет аккаунта? <Link>Создать</Link>
+    Ещё нет аккаунта?
+    <Link>Создать</Link>
   </p>
   <Form>
     <Field id="login" placeholder="Логин" type="text"/>

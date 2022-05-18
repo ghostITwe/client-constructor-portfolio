@@ -1,42 +1,42 @@
 <script>
 
-    export let type;
-    let logo = '';
+  export let type;
+  let logo = '';
 
-    function tick() {
-        setTimeout(() => {
-            logo += 'L';
-        }, 50);
-        setTimeout(() => {
-            logo += 'E';
-        }, 100);
-        setTimeout(() => {
-            logo += 'A';
-        }, 150);
-        setTimeout(() => {
-            logo += 'F';
-        }, 200);
-        setTimeout(() => {
-            logo += 'S';
-        }, 300);
-        setTimeout(() => {
-            logo += 'T';
-        }, 400);
-        setTimeout(() => {
-            logo += 'O';
-        }, 500);
-        setTimeout(() => {
-            logo += 'C';
-        }, 600);
-        setTimeout(() => {
-            logo += 'K';
-        }, 700);
-        setInterval(() => {
-            logo = logo.slice(-1) == '_' ? 'LEAFSTOCK' : 'LEAFSTOCK_';
-        }, 750);
-    }
+  function tick() {
+    setTimeout(() => {
+      logo += 'L';
+    }, 50);
+    setTimeout(() => {
+      logo += 'E';
+    }, 100);
+    setTimeout(() => {
+      logo += 'A';
+    }, 150);
+    setTimeout(() => {
+      logo += 'F';
+    }, 200);
+    setTimeout(() => {
+      logo += 'S';
+    }, 300);
+    setTimeout(() => {
+      logo += 'T';
+    }, 400);
+    setTimeout(() => {
+      logo += 'O';
+    }, 500);
+    setTimeout(() => {
+      logo += 'C';
+    }, 600);
+    setTimeout(() => {
+      logo += 'K';
+    }, 700);
+    setInterval(() => {
+      logo = logo.slice(-1) === '_' ? 'LEAFSTOCK' : 'LEAFSTOCK_';
+    }, 750);
+  }
 
-    tick();
+  tick();
 </script>
 
 <header class="flex justify-between p-4">
