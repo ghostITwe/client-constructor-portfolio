@@ -1,8 +1,8 @@
 import type { SvelteComponentDev } from 'svelte/internal';
-import type { Image } from '$lib/interfaces/Image';
+import type { IImage } from '$lib/interfaces/IImage';
 
-export interface ToolItem {
-  img: Image;
+export interface IToolItem {
+  img: IImage;
   text: string;
   name?: string;
   component?: typeof SvelteComponentDev;

@@ -1,13 +1,13 @@
-import type { ToolLink } from '$lib/interfaces/ToolLink';
+import { bar } from '$lib/stores';
+import type { IToolLink } from '$lib/interfaces/IToolLink';
 import { toggle } from '$lib/functions/sidebar';
 import { addBlock } from '$lib/functions/blocks';
-import { bar } from '$lib/stores';
 import Paragraph from '$lib/components/blocks/Paragraph.svelte';
 import Header from '$lib/components/blocks/Header.svelte';
 import Link from '$lib/components/blocks/Link.svelte';
 import Toolbar from '$lib/components/Toolbar.svelte';
 
-export const toolsLinks: ToolLink[][] = [[{
+export const toolsLinks: IToolLink[][] = [[{
   img: {
     alt: 'Шаблоны',
     src: '/assets/images/icon/toolbarIcon/templateIcon.svg'
@@ -106,3 +106,10 @@ export const toolsLinks: ToolLink[][] = [[{
   negative: '/assets/images/icon/toolbarIcon/negativeSaveIcon.svg',
   after: 'Сохранить'
 }]];
+
+export const propsList = {
+  text: {
+    name: 'Текст',
+    type: 'text'
+  }
+}
