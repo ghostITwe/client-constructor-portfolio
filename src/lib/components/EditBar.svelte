@@ -1,6 +1,9 @@
 <script lang="ts">
   import { bar, content } from '$lib/stores';
   import { propsList } from '$lib/vars';
+  import Paragraph from '$lib/components/blocks/Paragraph.svelte';
+
+  $: console.log(Paragraph);
 </script>
 
 <section class="grid w-80 gap-5">

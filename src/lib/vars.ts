@@ -107,9 +107,17 @@ export const toolsLinks: IToolLink[][] = [[{
   after: 'Сохранить'
 }]];
 
+export enum componentsList {
+  paragraph
+}
+
 export const propsList = {
   text: {
     name: 'Текст',
     type: 'text'
   }
+}
+
+export const props = {
+  [componentsList.paragraph]: [propsList.text]
 }

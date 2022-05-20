@@ -5,9 +5,6 @@
 <script>
   import { content } from '$lib/stores';
   import Sidebar from '$lib/components/Sidebar.svelte';
-  import { removeBlock } from '$lib/functions/blocks';
-
-  let logo = 'LS';
 </script>
 
 <div class="flex overflow-hidden h-screen">

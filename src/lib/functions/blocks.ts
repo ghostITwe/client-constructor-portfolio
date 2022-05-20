@@ -1,3 +1,4 @@
+import { componentsList, props } from '$lib/vars';
 import { content, bar } from '$lib/stores';
 import Editbar from '$lib/components/EditBar.svelte';
 
@@ -6,11 +7,9 @@ export function addBlock(component) {
 
   content.update(content => [...content, {
     index: index,
-    name: 'paragraph',
+    name: componentsList.paragraph,
     component: component,
-    props: {
-      text: 'test'
-    }
+    props: props[componentsList.paragraph]
   }]);
 
   bar.update(bar => {

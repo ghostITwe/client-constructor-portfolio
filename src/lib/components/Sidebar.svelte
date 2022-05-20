@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import Toolbar from '$lib/components/Toolbar.svelte';
   import ToolNavigation from '$lib/components/ToolNavigation.svelte';
   import { toggle } from '$lib/functions/sidebar';
