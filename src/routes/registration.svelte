@@ -3,7 +3,7 @@
   import Field from "$lib/components/Field.svelte";
   import Button from "$lib/components/Button.svelte";
   import Link from "$lib/components/Link.svelte";
-  import Header from "$lib/components/Heading.svelte";
+  import Header from "$lib/components/Header.svelte";
 </script>
 
 <Header type="cut"/>

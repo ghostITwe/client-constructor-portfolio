@@ -3,7 +3,7 @@
 </svelte:head>
 
 <script>
-  import Header from "$lib/components/Heading.svelte";
+  import Header from "$lib/components/Header.svelte";
 </script>
 
 
