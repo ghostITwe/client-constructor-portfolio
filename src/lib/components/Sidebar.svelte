@@ -1,9 +1,10 @@
 <script>
   import Toolbar from '$lib/components/Toolbar.svelte';
   import ToolNavigation from '$lib/components/ToolNavigation.svelte';
-  import { toggle } from '$lib/functions/sidebar';
   import { content, bar } from '$lib/stores';
+  import { toggle } from '$lib/functions/sidebar';
 
+  // FIXME: удалить и закрыть при старте страницы панель
   $bar = {
     component: Toolbar
   };
@@ -23,10 +24,7 @@
     </div>
 
 <!--  TODO: сделать изменение кнопки при клике  -->
-    <button class="absolute left-full top-1/2 transform -translate-y-1/2" on:click={() => {
-            toggle();
-            $bar.component = Toolbar;
-        }}>
+    <button class="absolute left-full top-1/2 transform -translate-y-1/2" on:click={toggle}>
       <svg width="14" height="70" viewBox="0 0 14 70" class="backdrop-blur-md" fill="none"
            xmlns="http://www.w3.org/2000/svg">
         <path

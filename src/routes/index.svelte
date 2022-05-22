@@ -3,7 +3,7 @@
 </svelte:head>
 
 <script>
-  import Header from "$lib/components/Header.svelte";
+  import Header from "$lib/components/Heading.svelte";
 </script>
 
 
@@ -26,7 +26,7 @@
   </article>
   <section class="grid text-white max-w-screen-2xl m-auto gap-60">
     <article class="grid grid-cols-2 items-center">
-      <img src="/assets/images/icon/laravel.svg" alt="laravel" class="w-80 h-80">
+      <img src="/assets/images/icons/laravel.svg" alt="laravel" class="w-80 h-80">
       <article>
         <h3 class="text-3xl font-bold mb-4 ">
           Laravel — это фреймворк для
@@ -39,7 +39,7 @@
       </article>
     </article>
     <article class="grid grid-cols-2 items-center">
-      <img src="/assets/images/icon/svelte.svg" alt="svelte" class="w-80 h-80">
+      <img src="/assets/images/icons/svelte.svg" alt="svelte" class="w-80 h-80">
       <article>
         <h3 class="text-3xl font-bold mb-4">
           Svelte. Радикальный подход к созданию пользовательских интерфейсов
@@ -58,7 +58,7 @@
           Основанный на JavaScript, предоставляющий вам лучшие инструменты в любом масштабе
         </p>
       </article>
-      <img src="/assets/images/icon/tailwindCss.svg" alt="typescript" class="w-80 h-80 justify-self-end">
+      <img src="/assets/images/icons/tailwindCss.svg" alt="typescript" class="w-80 h-80 justify-self-end">
     </article>
     <article class="grid grid-cols-2 items-center">
       <article>
@@ -70,7 +70,7 @@
           text-center и rotate-90, которые можно скомпоновать для создания любого дизайна прямо в вашей разметке
         </p>
       </article>
-      <img src="/assets/images/icon/typeScript.svg" alt="tailwindcss" class="w-80 h-80 justify-self-end">
+      <img src="/assets/images/icons/typeScript.svg" alt="tailwindcss" class="w-80 h-80 justify-self-end">
     </article>
   </section>
   <article class="m-auto text-center my-60">

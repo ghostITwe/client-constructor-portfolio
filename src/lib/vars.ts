@@ -1,123 +1,91 @@
-import { bar } from '$lib/stores';
 import type { IToolLink } from '$lib/interfaces/IToolLink';
-import { toggle } from '$lib/functions/sidebar';
 import { addBlock } from '$lib/functions/blocks';
 import Paragraph from '$lib/components/blocks/Paragraph.svelte';
-import Header from '$lib/components/blocks/Header.svelte';
+import Heading from '$lib/components/blocks/Heading.svelte';
 import Link from '$lib/components/blocks/Link.svelte';
-import Toolbar from '$lib/components/Toolbar.svelte';
+import { toggle } from '$lib/functions/sidebar';
+
+export enum BarsList {
+  toolbar,
+  editbar
+}
+
+export enum ComponentsList {
+  paragraph
+}
+
+export const propsList = {
+  text: {
+    name: 'text',
+    title: 'Текст',
+    type: 'string',
+    value: ''
+  }
+}
+
+export const props = {
+  [ComponentsList.paragraph]: [propsList.text]
+}
 
 export const toolsLinks: IToolLink[][] = [[{
-  img: {
-    alt: 'Шаблоны',
-    src: '/assets/images/icon/toolbarIcon/templateIcon.svg'
-  },
-  negative: '/assets/images/icon/toolbarIcon/negativeTemplateIcon.svg',
+  src: '/assets/images/icons/toolbar/templateIcon.svg',
+  negative: '/assets/images/icons/toolbar/negativeTemplateIcon.svg',
   after: 'Шаблоны',
-  onclick: toggle
+  onclick: toggle,
+  component: BarsList.editbar
 }, {
-  img: {
-    alt: 'Добавить',
-    src: '/assets/images/icon/toolbarIcon/addIcon.svg'
-  },
-  negative: '/assets/images/icon/toolbarIcon/negativeAddIcon.svg',
+  src: '/assets/images/icons/toolbar/addIcon.svg',
+  negative: '/assets/images/icons/toolbar/negativeAddIcon.svg',
   after: 'Добавить',
-  onclick: () => {
-    toggle();
-    bar.update(bar => {
-      return {
-        component: Toolbar
-      };
-    });
-  },
+  component: BarsList.toolbar,
   items: [{
-    img: {
-      alt: '',
-      src: '/assets/images/rec.svg'
-    },
+    alt: '',
+    src: '/assets/images/icons/blocks/paragraph.svg',
     text: 'Абзац',
     name: 'paragraph', // FIXME: нужен ли? Нужна переменная для передачи названия в функцию добавления
     component: Paragraph,
     onclick: addBlock
   }, {
-    img: {
-      alt: '',
-      src: '/assets/images/rec.svg'
-    },
+    alt: '',
+    src: '/assets/images/icons/blocks/list.svg',
     text: 'Список'
   }, {
-    img: {
-      alt: '',
-      src: '/assets/images/rec.svg'
-    },
+    alt: '',
+    src: '/assets/images/icons/blocks/heading.svg',
     text: 'Заголовок',
-    name: 'header',
-    component: Header,
+    name: 'heading',
+    component: Heading,
     onclick: addBlock
   }, {
-    img: {
-      alt: '',
-      src: '/assets/images/rec.svg'
-    },
+    alt: '',
+    src: '/assets/images/icons/blocks/blockquote.svg',
     text: 'Цитата'
   }, {
-    img: {
-      alt: '',
-      src: '/assets/images/rec.svg'
-    },
+    alt: '',
+    src: '/assets/images/icons/blocks/link.svg',
     text: 'Ссылка',
     name: 'link',
     component: Link,
     onclick: addBlock
   }]
 }, {
-  img: {
-    alt: 'Медия',
-    src: '/assets/images/icon/toolbarIcon/mediaIcon.svg'
-  },
-  negative: '/assets/images/icon/toolbarIcon/negativeMediaIcon.svg',
+  src: '/assets/images/icons/toolbar/mediaIcon.svg',
+  negative: '/assets/images/icons/toolbar/negativeMediaIcon.svg',
   after: 'Медия'
 }, {
-  img: {
-    alt: 'Дизайн',
-    src: '/assets/images/icon/toolbarIcon/designIcon.svg'
-  },
-  negative: '/assets/images/icon/toolbarIcon/negativeDesignIcon.svg',
+  src: '/assets/images/icons/toolbar/designIcon.svg',
+  negative: '/assets/images/icons/toolbar/negativeDesignIcon.svg',
   after: 'Дизайн'
 }, {
-  img: {
-    alt: 'Адаптив',
-    src: '/assets/images/icon/toolbarIcon/adaptiveIcon.svg'
-  },
-  negative: '/assets/images/icon/toolbarIcon/negativeAdaptiveIcon.svg',
+  src: '/assets/images/icons/toolbar/adaptiveIcon.svg',
+  negative: '/assets/images/icons/toolbar/negativeAdaptiveIcon.svg',
   after: 'Адаптив'
 }], [{
-  img: {
-    alt: 'Просмотр',
-    src: '/assets/images/icon/toolbarIcon/viewIcon.svg'
-  },
-  negative: '/assets/images/icon/toolbarIcon/negativeViewIcon.svg',
+  src: '/assets/images/icons/toolbar/viewIcon.svg',
+  negative: '/assets/images/icons/toolbar/negativeViewIcon.svg',
   after: 'Просмотр'
 }, {
-  img: {
-    alt: 'Сохранить',
-    src: '/assets/images/icon/toolbarIcon/saveIcon.svg'
-  },
-  negative: '/assets/images/icon/toolbarIcon/negativeSaveIcon.svg',
+  src: '/assets/images/icons/toolbar/saveIcon.svg',
+  negative: '/assets/images/icons/toolbar/negativeSaveIcon.svg',
   after: 'Сохранить'
 }]];
-
-export enum componentsList {
-  paragraph
-}
-
-export const propsList = {
-  text: {
-    name: 'Текст',
-    type: 'text'
-  }
-}
-
-export const props = {
-  [componentsList.paragraph]: [propsList.text]
-}

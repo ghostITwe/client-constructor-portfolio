@@ -1,23 +1,27 @@
-import { componentsList, props } from '$lib/vars';
-import { content, bar } from '$lib/stores';
+import { get } from 'svelte/store';
+import { ComponentsList, props } from '$lib/vars';
+import { content, bar, index } from '$lib/stores';
 import Editbar from '$lib/components/EditBar.svelte';
 
 export function addBlock(component) {
-  let index = 0;
+  const id = get(index);
 
+  // FIXME: обдумать реализацию props
   content.update(content => [...content, {
-    index: index,
-    name: componentsList.paragraph,
+    index: id,
+    name: ComponentsList.paragraph,
     component: component,
-    props: props[componentsList.paragraph]
+    props: {...props[ComponentsList.paragraph]}
   }]);
 
   bar.update(bar => {
     return {
-      index: index,
+      index: id,
       component: Editbar
     };
   });
+
+  index.update(index => index + 1);
 }
 
 export function removeBlock(index) {

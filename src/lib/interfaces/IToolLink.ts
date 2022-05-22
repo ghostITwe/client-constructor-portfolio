@@ -1,12 +1,12 @@
 import type { SvelteComponentDev } from 'svelte/internal';
 import type { IToolItem } from '$lib/interfaces/IToolItem';
-import type { IImage } from '$lib/interfaces/IImage';
+import type { BarsList } from '$lib/vars';
 
 export interface IToolLink {
-  img: IImage;
+  src: string;
   negative: string;
   after: string;
-  component?: typeof SvelteComponentDev;
+  component?: BarsList; // typeof SvelteComponentDev;
   onclick?: Function; // FIXME: сделать обязательным?
   items?: IToolItem[];
 }

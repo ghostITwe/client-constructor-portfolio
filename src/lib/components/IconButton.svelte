@@ -1,21 +1,20 @@
 <script>
   import { bar } from '$lib/stores';
   import { toggle } from '$lib/functions/sidebar';
-  import Toolbar from '$lib/components/Toolbar.svelte';
 
-  export let after, img, negative,
-      src = img.src,
-      alt = img.alt,
-      onclick = '';
+  export let after, negative, component, bars, src;
 </script>
 
-
 <button {after} on:click={() => {
-  toggle();
-  $bar.component = Toolbar
+  if ($bar.component === bars[component]) {
+    toggle();
+  } else {
+    toggle(true);
+    $bar.component = bars[component];
+  }
 }} class="iconBtn">
-  <img {src} {alt}/>
-  <img class="negativeImg" src={negative} alt=""/>
+  <img {src} alt={after}/>
+  <img class="negativeImg" src={negative} alt={after}/>
 </button>
 
 <style>
