@@ -3,7 +3,7 @@
 </script>
 
 <section class="grid w-80 grid-cols-2 gap-5">
-  <h3 class="text-white col-span-2 pl-4">Текст</h3>
+  <h3 class="text-xl text-white col-span-2 pl-4">Основные</h3>
 <!-- FIXME: переписать на названиях -->
   {#each toolsLinks[0][1].items as { text, onclick, component, src, alt }}
     <article data-component={component}
