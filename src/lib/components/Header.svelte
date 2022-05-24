@@ -2,7 +2,7 @@
 
   export let type;
   let logo = '';
-
+  // FIXME: Переделать его)
   function tick() {
     setTimeout(() => {
       logo += 'L';
