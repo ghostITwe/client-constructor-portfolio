@@ -8,17 +8,7 @@
     }
   }
 
-  // $: a = $content.find(el => el.index === $bar.index);
-  // $: {
-  //   const b = $content.findIndex(el => el.index === $bar.index);
-  //   $content[b] = a;
-  // }
-
   $: index = $content.findIndex(el => el.index === $bar.index);
-
-  $: console.log('bar', $bar);
-  $: console.log('content', $content);
-  $: console.log('index', index);
 </script>
 
 <section class="grid w-80 gap-5">

@@ -36,7 +36,6 @@ export function addBlock(component) {
 export function removeBlock(index) {
   content.update(content => {
     content.splice(index, 1);
-    // content = content.filter(el => el.index !== index);
     return content;
   });
 }
