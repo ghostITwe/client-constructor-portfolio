@@ -60,13 +60,6 @@ export const toolsLinks: IToolLink[][] = [[{
     alt: '',
     src: '/assets/images/icons/blocks/blockquote.svg',
     text: 'Цитата'
-  }, {
-    alt: '',
-    src: '/assets/images/icons/blocks/link.svg',
-    text: 'Ссылка',
-    name: 'link',
-    component: Link,
-    onclick: addBlock
   }]
 }, {
   src: '/assets/images/icons/toolbar/mediaIcon.svg',

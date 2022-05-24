@@ -13,10 +13,10 @@
 
 <div class="relative">
 <p tabindex="0" on:focus={onfocus}
-   class="w-full min-h-[1rem] p-4 rounded-3xl duration-100 cursor-pointer border-2 border-transparent ring-blue-300/30
+   class="bg-blue-100 w-full min-h-[1rem] p-4 rounded-3xl duration-100 cursor-pointer border-2 border-transparent ring-blue-300/30
       hover:ring-2 hover:border-white
       focus:border-white focus:backdrop-blur-md focus:bg-blue-100/80 focus:ring-4">{$content[index]?.props.text ?? ''}</p>
-<button on:click={() => {
+  <button on:click={() => {
 //  $bar.component = Toolbar;
   if ($bar.index === index) $bar.index = undefined;
   removeBlock(index);
