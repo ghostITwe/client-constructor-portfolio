@@ -5,6 +5,15 @@ import Editbar from '$lib/components/EditBar.svelte';
 
 export function addBlock(component) {
   const id = get(index);
+  // FIXME: как проводить поиск и сортировку
+  //   content = {
+  //     [id]: {
+  //       index: id,
+  //       name: ComponentsList.paragraph,
+  //       component: component,
+  //       props: {...props[ComponentsList.paragraph]}
+  //     }
+  //   }
 
   // FIXME: обдумать реализацию props
   content.update(content => [...content, {

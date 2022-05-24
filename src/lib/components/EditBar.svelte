@@ -3,7 +3,9 @@
   import { ComponentsList, props } from '$lib/vars';
 
   function setDefaultValue(name, value) {
-    $content[$bar.index].props[name] = value;
+    if (typeof $bar.index === 'number') {
+      $content[$bar.index].props[name] = value;
+    }
   }
 </script>
 
@@ -13,9 +15,9 @@
   <!-- FIXME: При полной очистке поля ввода невозможно изменить элемент -->
   <!--   Возможно можно доп. условие на onfocus -->
   <div>
-    {#if typeof $bar.index === 'number'}
+    {#if typeof $bar.index === 'number' && $content[$bar.index]}
       {#each props[ComponentsList.paragraph] as { name, title, type, value }}
-        {#if typeof $content[$bar.index].props[name] === type}
+        {#if typeof $content[$bar.index]?.props[name] === type}
           <h3 class="text-white pl-4">{title}</h3>
           <input type="text" bind:value={$content[$bar.index].props[name]}>
         {:else}
