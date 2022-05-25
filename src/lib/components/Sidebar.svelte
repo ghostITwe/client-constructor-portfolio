@@ -17,9 +17,8 @@
          backdrop-blur-md bg-main-color/90 absolute z-10 left-full top-0 transform
          after:block after:content-[''] after:w-px after:absolute after:top-0 after:bottom-0 after:bg-transparent after:shadow-[0_0_11px_0_#fff8]
     ">
-    <!--   FIXME: заменить стили тени у after-элемента   -->
     <div class="grid p-6 pl-8 gap-6 overflow-y-scroll no-scrollbar content-start">
-      <!--          TODO: попробовать сделать динамическим атрибут - props={$content[$bar.index]?.props}  -->
+      <!--          TODO: попробовать сделать динамическим атрибут - props={$content[$bar.id]?.props}  -->
       <svelte:component this={$bar.component}/>
     </div>
 

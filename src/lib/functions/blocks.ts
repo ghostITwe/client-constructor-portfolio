@@ -1,23 +1,14 @@
 import { get } from 'svelte/store';
 import { ComponentsList, props } from '$lib/vars';
-import { content, bar, index } from '$lib/stores';
+import { content, bar, freeId } from '$lib/stores';
 import Editbar from '$lib/components/EditBar.svelte';
 
 export function addBlock(component) {
-  const id = get(index);
-  // FIXME: как проводить поиск и сортировку
-  //   content = {
-  //     [id]: {
-  //       index: id,
-  //       name: ComponentsList.paragraph,
-  //       component: component,
-  //       props: {...props[ComponentsList.paragraph]}
-  //     }
-  //   }
+  const id = get(freeId);
 
   // FIXME: обдумать реализацию props
   content.update(content => [...content, {
-    index: id,
+    id: id,
     name: ComponentsList.paragraph,
     component: component,
     props: {...props[ComponentsList.paragraph]}
@@ -25,12 +16,12 @@ export function addBlock(component) {
 
   bar.update(bar => {
     return {
-      index: id,
+      id: id,
       component: Editbar
     };
   });
 
-  index.update(index => index + 1);
+  freeId.update(freeId => freeId + 1);
 }
 
 export function removeBlock(index) {

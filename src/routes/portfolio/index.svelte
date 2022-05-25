@@ -11,8 +11,8 @@
   <Sidebar/>
   <main class="overflow-y-auto w-full bg-white max-w-screen-lg mx-auto p-8">
     <!--  TODO: Возможно (index) не требуется  -->
-    {#each $content as { component, index }}
-      <svelte:component this={component} {index}/>
+    {#each $content as { component, id }}
+      <svelte:component this={component} {id}/>
     {/each}
   </main>
 </div>
