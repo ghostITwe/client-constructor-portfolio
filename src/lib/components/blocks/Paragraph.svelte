@@ -1,18 +1,21 @@
 <script>
   import { bar, content } from '$lib/stores';
+  import { toggle } from '$lib/functions/sidebar';
   import { removeBlock } from '$lib/functions/blocks';
   import EditBar from '$lib/components/EditBar.svelte';
 
   export let id;
 
+
+  // FIXME: перенести в отдельный файл
   function onfocus() {
     $bar.component = EditBar;
     $bar.id = id;
+    toggle(true);
   }
 
   $: index = $content.findIndex(el => el.id === id);
 </script>
-
 
 <div class="relative">
   <p tabindex="0" on:focus={onfocus}

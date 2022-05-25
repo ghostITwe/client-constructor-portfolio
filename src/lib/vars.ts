@@ -8,7 +8,8 @@ import Blockquote from '$lib/components/blocks/Blockquote.svelte';
 
 export enum BarsList {
   toolbar,
-  editbar
+  editbar,
+  adaptivebar
 }
 
 export enum ComponentsList {
@@ -42,7 +43,6 @@ export const toolsLinks: IToolLink[][] = [[{
   src: '/assets/images/icons/toolbar/templateIcon.svg',
   negative: '/assets/images/icons/toolbar/negativeTemplateIcon.svg',
   after: 'Шаблоны',
-  onclick: toggle,
   component: BarsList.editbar
 }, {
   src: '/assets/images/icons/toolbar/addIcon.svg',
@@ -86,7 +86,8 @@ export const toolsLinks: IToolLink[][] = [[{
 }, {
   src: '/assets/images/icons/toolbar/adaptiveIcon.svg',
   negative: '/assets/images/icons/toolbar/negativeAdaptiveIcon.svg',
-  after: 'Адаптив'
+  after: 'Адаптив',
+  component: BarsList.adaptivebar
 }], [{
   src: '/assets/images/icons/toolbar/viewIcon.svg',
   negative: '/assets/images/icons/toolbar/negativeViewIcon.svg',

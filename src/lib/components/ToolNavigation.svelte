@@ -3,15 +3,17 @@
   import IconButton from '$lib/components/IconButton.svelte';
   import Toolbar from '$lib/components/Toolbar.svelte';
   import EditBar from '$lib/components/EditBar.svelte';
+  import AdaptiveBar from '$lib/components/AdaptiveBar.svelte';
 
   // FIXME: попробовать вынести в vars.ts
   export const bars = {
     [BarsList.toolbar]: Toolbar,
-    [BarsList.editbar]: EditBar
+    [BarsList.editbar]: EditBar,
+    [BarsList.adaptivebar]: AdaptiveBar
   }
 </script>
 
-<section class="relative z-20 bg-main-color flex flex-col min-h-screen items-center gap-2 p-2 ">
+<section class="relative z-20 bg-main-color flex flex-col min-h-screen items-center gap-2 p-2 overflow-y-scroll no-scrollbar h-full">
   <!--  FIXME: заменить тень на логотипе  -->
   <a href="#"
      class="p-1 text-3xl font-bold bg-black align-middle text-center text-white shadow-[0_3px_5px_rgba(0_0_0_/_0.5)]">L<span

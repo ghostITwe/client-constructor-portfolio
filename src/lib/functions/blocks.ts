@@ -15,10 +15,9 @@ export function addBlock(component, name) {
   }]);
 
   bar.update(bar => {
-    return {
-      id: id,
-      component: Editbar
-    };
+    bar.id = id;
+    bar.component = Editbar;
+    return bar;
   });
 
   freeId.update(freeId => freeId + 1);
