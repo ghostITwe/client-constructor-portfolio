@@ -1,7 +1,7 @@
 <script>
   import { bar, content } from '$lib/stores';
-  import EditBar from '$lib/components/EditBar.svelte';
   import { removeBlock } from '$lib/functions/blocks';
+  import EditBar from '$lib/components/EditBar.svelte';
 
   export let id;
 

@@ -1,8 +1,8 @@
 <script>
-  import Toolbar from '$lib/components/Toolbar.svelte';
-  import ToolNavigation from '$lib/components/ToolNavigation.svelte';
   import { content, bar } from '$lib/stores';
   import { toggle } from '$lib/functions/sidebar';
+  import Toolbar from '$lib/components/Toolbar.svelte';
+  import ToolNavigation from '$lib/components/ToolNavigation.svelte';
 
   // FIXME: удалить и закрыть при старте страницы панель
   $bar = {
@@ -18,7 +18,7 @@
          after:block after:content-[''] after:w-px after:absolute after:top-0 after:bottom-0 after:bg-transparent after:shadow-[0_0_11px_0_#fff8]
     ">
     <div class="grid p-6 pl-8 gap-6 overflow-y-scroll no-scrollbar content-start">
-      <!--          TODO: попробовать сделать динамическим атрибут - props={$content[$bar.id]?.props}  -->
+      <!--  TODO: попробовать сделать динамическим атрибут - props={$content[$bar.id]?.props}  -->
       <svelte:component this={$bar.component}/>
     </div>
 

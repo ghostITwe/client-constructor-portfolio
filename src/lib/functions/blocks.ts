@@ -3,15 +3,15 @@ import { ComponentsList, props } from '$lib/vars';
 import { content, bar, freeId } from '$lib/stores';
 import Editbar from '$lib/components/EditBar.svelte';
 
-export function addBlock(component) {
+export function addBlock(component, name) {
   const id = get(freeId);
 
   // FIXME: обдумать реализацию props
   content.update(content => [...content, {
     id: id,
-    name: ComponentsList.paragraph,
+    name: name,
     component: component,
-    props: {...props[ComponentsList.paragraph]}
+    props: {...props[name]}
   }]);
 
   bar.update(bar => {

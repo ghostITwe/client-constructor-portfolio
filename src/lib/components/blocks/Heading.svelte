@@ -1,14 +1,16 @@
 <script>
   import { bar, content } from '$lib/stores';
-  import EditBar from '$lib/components/EditBar.svelte';
   import { removeBlock } from '$lib/functions/blocks';
+  import EditBar from '$lib/components/EditBar.svelte';
 
-  export let index;
+  export let id;
 
   function onfocus() {
     $bar.component = EditBar;
-    $bar.index = index;
+    $bar.id = id;
   }
+
+  $: index = $content.findIndex(el => el.id === id);
 </script>
 <!--TODO: Сделать заголовок динамическим?-->
 <div class="relative">
@@ -19,9 +21,6 @@
 ">{$content[index]?.props.text ?? ''}</h1>
   <!-- FIXME: сделать компонентом -->
   <button on:click={() => {
-//  $bar.component = Toolbar;
-  if ($bar.index === index) $bar.index = undefined;
-  removeBlock(index);
-}} class="absolute top-0 right-0 bottom-0 hover:bg-red-600 rounded-3xl px-4 py-2">X
-  </button>
+    removeBlock(index);
+  }} class="absolute top-0 right-0 bottom-0 hover:bg-red-600 rounded-3xl px-4 py-2">X</button>
 </div>
