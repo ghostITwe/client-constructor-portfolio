@@ -5,8 +5,15 @@
 <script>
   import { bar, content } from '$lib/stores';
   import Sidebar from '$lib/components/Sidebar.svelte';
+  import { onMount } from 'svelte';
 
-  $: adaptive = $bar?.adaptive;
+  let loadedAdaptive;
+
+  onMount(() => {
+    loadedAdaptive = sessionStorage.getItem('adaptive');
+  });
+
+  $: adaptive = $bar?.adaptive ?? loadedAdaptive;
 </script>
 
 <div class="flex overflow-hidden h-screen">

@@ -3,6 +3,7 @@
 
   function switchAdaptive(size) {
     $bar.adaptive = size ? size : undefined;
+    sessionStorage.setItem('adaptive', size);
   }
 </script>
 
