@@ -1,12 +1,17 @@
+<script context="module">
+
+</script>
+
 <script lang="ts">
   import Form from "$lib/components/Form.svelte";
   import Field from "$lib/components/Field.svelte";
   import Button from "$lib/components/Button.svelte";
   import Link from "$lib/components/Link.svelte";
   import Header from "$lib/components/Header.svelte";
+
 </script>
 
-
+<!--TODO: Сделать on:click|preventDefault на кнопку-->
 <Header type="cut"/>
 <main class="max-w-screen-sm m-auto mt-24">
   <h1 class="text-white text-6xl font-bold text-center">Вход</h1>
@@ -14,7 +19,7 @@
     Ещё нет аккаунта?
     <Link>Создать</Link>
   </p>
-  <Form>
+  <Form method="post">
     <Field id="login" placeholder="Логин" type="text"/>
     <div class="grid gap-4">
       <Field id="password" placeholder="Пароль" type="password"/>
