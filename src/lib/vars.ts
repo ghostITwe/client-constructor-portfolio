@@ -1,5 +1,6 @@
 import type { IToolLink } from '$lib/interfaces/IToolLink';
 import { addBlock } from '$lib/functions/blocks';
+import { savePortfolio } from '$lib/functions/portfolio';
 import Paragraph from '$lib/components/blocks/Paragraph.svelte';
 import Heading from '$lib/components/blocks/Heading.svelte';
 import Link from '$lib/components/blocks/Link.svelte';
@@ -95,5 +96,6 @@ export const toolsLinks: IToolLink[][] = [[{
 }, {
   src: '/assets/images/icons/toolbar/saveIcon.svg',
   negative: '/assets/images/icons/toolbar/negativeSaveIcon.svg',
-  after: 'Сохранить'
+  after: 'Сохранить',
+  onclick: savePortfolio // TODO: Сделать реализацию сохранения
 }]];

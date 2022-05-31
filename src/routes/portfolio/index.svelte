@@ -5,12 +5,13 @@
 <script>
   import { bar, content } from '$lib/stores';
   import Sidebar from '$lib/components/Sidebar.svelte';
-  import { afterUpdate, onMount } from 'svelte';
+  import { onMount } from 'svelte';
 
   onMount(() => {
     $bar.adaptive = sessionStorage.getItem('adaptive');
   })
 
+  //TODO: class Proxy($content[id].component) переделать в Object и сделать JSON.stringify($content)
   $: adaptive = $bar?.adaptive;
 </script>
 
