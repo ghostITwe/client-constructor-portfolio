@@ -5,3 +5,4 @@
 /.idea
 /.svelte-kit
 package-lock.json
+.env
