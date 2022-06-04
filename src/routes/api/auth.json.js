@@ -1,7 +1,7 @@
 export async function post({ request }) {
     const formBody = await request.json();
 
-    return await fetch("https://fef5048a28eea3.lhrtunnel.link/api/auth", {
+    return await fetch("http://vds.4it.space/api/auth", {
         method: 'POST',
         headers: {
             'Content-type': 'application/json',
