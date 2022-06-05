@@ -2,15 +2,19 @@
   import { bar } from '$lib/stores';
   import { toggle } from '$lib/functions/sidebar';
 
-  export let after, negative, component, bars, src;
+  export let after, negative, component, bars, src, onclick;
 </script>
 
 <button {after} on:click={() => {
-  if ($bar.component === bars[component]) {
-    toggle();
+  if (component) {
+    if ($bar.component === bars[component]) {
+      toggle();
+    } else {
+      toggle(true);
+      $bar.component = bars[component];
+    }
   } else {
-    toggle(true);
-    $bar.component = bars[component];
+    if (onclick) onclick();
   }
 }} class="iconBtn">
   <img {src} alt={after}/>
