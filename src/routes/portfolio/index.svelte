@@ -17,11 +17,11 @@
   });
 
   async function getTest() {
-    const a = await getPortfolio();
-    if (a?.status) {
-      // $content = a?.contentPortfolio ?? [];
+    const portfolio = await getPortfolio();
+    // FIXME: попробовать вынести в саму функцию
+    if (portfolio?.status) {
+      $content = portfolio?.contentPortfolio ?? [];
     }
-    console.log(a);
   }
 
   let loading = getTest();
