@@ -19,10 +19,10 @@
       <div class="border-white border rounded h-5 w-full"></div>
     </div>
     <h2 class="text-6xl text-white mb-7 font-bold mt-20 px-4 leading-[5rem]">Конструктор портфолио</h2>
-    <button
-        class="text-4xl text-white border-2 border-white py-2.5 px-10 rounded-2xl shadow-md shadow-white mb-24 hover:bg-[#0019F5] duration-200">
+    <a href="/registration"
+       class="inline-block text-4xl text-white border-2 border-white py-2.5 px-10 rounded-2xl shadow-md shadow-white mb-24 hover:bg-[#0019F5] duration-200">
       Регистрация »
-    </button>
+    </a>
   </article>
   <section class="grid text-white max-w-screen-2xl m-auto gap-60">
     <article class="grid grid-cols-2 items-center">
@@ -78,10 +78,10 @@
       Создайте свое<br>
       профессиональное портфолио
     </h2>
-    <button
-        class="text-4xl text-white border-2 border-white py-2.5 px-10 rounded-2xl shadow-md shadow-white hover:bg-[#0019F5] duration-200">
+    <a href="/registration"
+       class="inline-block text-4xl text-white border-2 border-white py-2.5 px-10 rounded-2xl shadow-md shadow-white hover:bg-[#0019F5] duration-200">
       Регистрация »
-    </button>
+    </a>
   </article>
 </main>
 <footer class="p-4 bg-[#464646] mt-12">

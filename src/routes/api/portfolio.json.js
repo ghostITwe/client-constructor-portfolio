@@ -2,7 +2,7 @@ export async function post({ request }) {
     const formBody = await request.json();
     const authToken = request.headers.get('authorization');
 
-    return await fetch("http://vds.4it.space/api/portfolio", {
+    return await fetch(`${import.meta.env.VITE_BASE_URL}/api/portfolio`, {
         method: 'POST',
         headers: {
             'Authorization': authToken,
@@ -16,7 +16,7 @@ export async function post({ request }) {
 export async function get({ request }) {
     const authToken = request.headers.get('authorization');
 
-    return await fetch("http://vds.4it.space/api/portfolio", {
+    return await fetch(`${import.meta.env.VITE_BASE_URL}/api/portfolio`, {
         method: 'GET',
         headers: {
             'Authorization': authToken,

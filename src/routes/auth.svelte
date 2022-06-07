@@ -29,7 +29,7 @@
   <h1 class="text-white text-6xl font-bold text-center">Вход</h1>
   <p class="text-white text-center font-bold mt-5 text-2xl">
     Ещё нет аккаунта?
-    <Link>Создать</Link>
+    <Link href="/registration">Создать</Link>
   </p>
 <!--  TODO: сделать стили для ошибок -->
   {#if errors}

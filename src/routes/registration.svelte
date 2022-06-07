@@ -28,7 +28,7 @@
   <h1 class="text-white text-6xl font-bold text-center">Новый аккаунт</h1>
   <p class="text-white text-center font-bold mt-5 text-2xl">
     У вас уже есть аккаунт?
-    <Link>Войти</Link>
+    <Link href="auth">Войти</Link>
   </p>
   <Form method="post" on:submit={(e) => {
        e.preventDefault();

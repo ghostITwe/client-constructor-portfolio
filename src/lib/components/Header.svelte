@@ -40,7 +40,7 @@
 </script>
 
 <header class="flex justify-between p-4">
-  <a href="#" class="text-2xl text-white font-bold ml-32">{logo}</a>
+  <a href="/" class="text-2xl text-white font-bold ml-32">{logo}</a>
   {#if type !== 'cut'}
     <nav class="flex items-center text-white text-xl gap-8">
       <a href="#"><img src="assets/switch.svg" alt="switchTheme" class="w-8"></a>
