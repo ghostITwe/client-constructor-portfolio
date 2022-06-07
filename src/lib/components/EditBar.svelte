@@ -1,6 +1,6 @@
 <script>
   import { bar, content } from '$lib/stores';
-  import { ComponentsList, props } from '$lib/vars';
+  import { props } from '$lib/vars';
 
   function setDefaultValue(name, value) {
     if (index !== -1) {
@@ -12,8 +12,8 @@
 </script>
 
 <section class="grid w-80 gap-5">
-  {#if typeof $bar.id === 'number' && index !== -1 && props[$content[index].name]}
-    {#each props[$content[index].name] as { name, title, type, value }}
+  {#if typeof $bar.id === 'number' && index !== -1 && props[$content[index].componentName]}
+    {#each props[$content[index].componentName] as { name, title, type, value }}
       <div>
         {#if typeof $content[index]?.props[name] === type}
           <h3 class="text-xl mb-5 text-white pl-4">{title}</h3>

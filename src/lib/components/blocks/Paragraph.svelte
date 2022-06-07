@@ -1,7 +1,6 @@
 <script>
   import { bar, content } from '$lib/stores';
   import { toggle } from '$lib/functions/sidebar';
-  import { removeBlock } from '$lib/functions/blocks';
   import EditBar from '$lib/components/EditBar.svelte';
   import Trash from '$lib/components/Trash.svelte';
 
@@ -9,7 +8,7 @@
 
   // FIXME: перенести в отдельный файл
   function onfocus() {
-    $bar.component = EditBar;
+    $bar.componentName = EditBar;
     $bar.id = id;
     toggle(true);
   }

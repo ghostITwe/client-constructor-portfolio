@@ -1,17 +1,18 @@
 <script>
   import { bar } from '$lib/stores';
+  import { bars } from '$lib/vars';
   import { toggle } from '$lib/functions/sidebar';
 
-  export let after, negative, component, bars, src, onclick;
+  export let after, negative, componentName, src, onclick;
 </script>
 
 <button {after} on:click={() => {
-  if (component) {
-    if ($bar.component === bars[component]) {
+  if (bars[componentName]) {
+    if ($bar.component === bars[componentName]) {
       toggle();
     } else {
       toggle(true);
-      $bar.component = bars[component];
+      $bar.component = bars[componentName];
     }
   } else {
     if (onclick) onclick();

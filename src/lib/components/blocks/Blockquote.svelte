@@ -7,7 +7,7 @@
   export let id;
 
   function onfocus() {
-    $bar.component = EditBar;
+    $bar.componentName = EditBar;
     $bar.id = id;
     toggle(true);
   }

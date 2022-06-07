@@ -1,10 +1,12 @@
 <script>
-  import { bar } from '$lib/stores.js';
+  import { bar } from '$lib/stores';
 
   function switchAdaptive(size) {
     $bar.adaptive = size ? size : undefined;
     sessionStorage.setItem('adaptive', size ?? '');
   }
+
+//  TODO: автоматизировать
 </script>
 
 <section class="grid w-80 gap-5 text-white">

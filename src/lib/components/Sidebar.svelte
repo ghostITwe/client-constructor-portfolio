@@ -1,12 +1,12 @@
 <script>
-  import { content, bar } from '$lib/stores';
+  import { bar } from '$lib/stores';
+  import { bars, BarsList } from '$lib/vars';
   import { toggle } from '$lib/functions/sidebar';
-  import Toolbar from '$lib/components/Toolbar.svelte';
   import ToolNavigation from '$lib/components/ToolNavigation.svelte';
 
   // FIXME: удалить и закрыть при старте страницы панель
   $bar = {
-    component: Toolbar
+    component: bars[BarsList.toolbar]
   };
 </script>
 
@@ -14,7 +14,7 @@
   <ToolNavigation/>
   <section id="bar"
            class="h-screen duration-200
-         backdrop-blur-md bg-main-color/90 absolute z-10 left-full top-0 transform
+         backdrop-blur-md bg-main-color/90 absolute z-10 left-full top-0 transform -translate-x-full
          after:block after:content-[''] after:w-px after:absolute after:top-0 after:bottom-0 after:bg-transparent after:shadow-[0_0_11px_0_#fff8]
     ">
     <div class="grid p-6 pl-8 gap-6 overflow-y-scroll no-scrollbar h-full content-start">

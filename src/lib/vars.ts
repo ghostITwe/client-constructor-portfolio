@@ -3,9 +3,10 @@ import { addBlock } from '$lib/functions/blocks';
 import { savePortfolio } from '$lib/functions/portfolio';
 import Paragraph from '$lib/components/blocks/Paragraph.svelte';
 import Heading from '$lib/components/blocks/Heading.svelte';
-import Link from '$lib/components/blocks/Link.svelte';
-import { toggle } from '$lib/functions/sidebar';
 import Blockquote from '$lib/components/blocks/Blockquote.svelte';
+import Toolbar from '$lib/components/Toolbar.svelte';
+import EditBar from '$lib/components/EditBar.svelte';
+import AdaptiveBar from '$lib/components/AdaptiveBar.svelte';
 
 export enum BarsList {
   toolbar,
@@ -13,7 +14,7 @@ export enum BarsList {
   adaptivebar
 }
 
-export enum ComponentsList {
+export enum BlocksList {
   paragraph,
   heading,
   blockquote
@@ -34,28 +35,39 @@ export const propsList = {
   }
 }
 
+export const bars = {
+  [BarsList.toolbar]: Toolbar,
+  [BarsList.editbar]: EditBar,
+  [BarsList.adaptivebar]: AdaptiveBar
+}
+
+export const blocks = {
+  [BlocksList.paragraph]: Paragraph,
+  [BlocksList.heading]: Heading,
+  [BlocksList.blockquote]: Blockquote
+}
+
 export const props = {
-  [ComponentsList.paragraph]: [propsList.text],
-  [ComponentsList.heading]: [propsList.text],
-  [ComponentsList.blockquote]: [propsList.text, propsList.author]
+  [BlocksList.paragraph]: [propsList.text],
+  [BlocksList.heading]: [propsList.text],
+  [BlocksList.blockquote]: [propsList.text, propsList.author]
 }
 
 export const toolsLinks: IToolLink[][] = [[{
   src: '/assets/images/icons/toolbar/templateIcon.svg',
   negative: '/assets/images/icons/toolbar/negativeTemplateIcon.svg',
   after: 'Шаблоны',
-  component: BarsList.editbar
+  componentName: BarsList.editbar
 }, {
   src: '/assets/images/icons/toolbar/addIcon.svg',
   negative: '/assets/images/icons/toolbar/negativeAddIcon.svg',
   after: 'Добавить',
-  component: BarsList.toolbar,
+  componentName: BarsList.toolbar,
   items: [{
     alt: '',
     src: '/assets/images/icons/blocks/paragraph.svg',
     text: 'Абзац',
-    name: ComponentsList.paragraph, // FIXME: нужен ли? Нужна переменная для передачи названия в функцию добавления
-    component: Paragraph,
+    componentName: BlocksList.paragraph, // FIXME: нужен ли? Нужна переменная для передачи названия в функцию добавления
     onclick: addBlock
   }, {
     alt: '',
@@ -65,15 +77,13 @@ export const toolsLinks: IToolLink[][] = [[{
     alt: '',
     src: '/assets/images/icons/blocks/heading.svg',
     text: 'Заголовок',
-    name: ComponentsList.heading,
-    component: Heading,
+    componentName: BlocksList.heading,
     onclick: addBlock
   }, {
     alt: '',
     src: '/assets/images/icons/blocks/blockquote.svg',
     text: 'Цитата',
-    name: ComponentsList.blockquote,
-    component: Blockquote,
+    componentName: BlocksList.blockquote,
     onclick: addBlock
   }]
 }, {
@@ -88,7 +98,7 @@ export const toolsLinks: IToolLink[][] = [[{
   src: '/assets/images/icons/toolbar/adaptiveIcon.svg',
   negative: '/assets/images/icons/toolbar/negativeAdaptiveIcon.svg',
   after: 'Адаптив',
-  component: BarsList.adaptivebar
+  componentName: BarsList.adaptivebar
 }], [{
   src: '/assets/images/icons/toolbar/viewIcon.svg',
   negative: '/assets/images/icons/toolbar/negativeViewIcon.svg',

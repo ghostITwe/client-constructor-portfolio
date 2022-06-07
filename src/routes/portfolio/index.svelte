@@ -2,33 +2,25 @@
   <title>Портфолио</title>
 </svelte:head>
 
-<!--FIXME: Подумать как передавать токен при загрузке контента-->
-<!--<script context="module">-->
-<!--  import { getPortfolio } from "$lib/functions/portfolio";-->
-
-<!--  export async function load() {-->
-<!--      let data = await getPortfolio();-->
-
-<!--      return {-->
-<!--          props: {-->
-<!--              contentValue: data-->
-<!--          }-->
-<!--      }-->
-
-<!--  }-->
-<!--</script>-->
-
 <script>
   import { bar, content } from '$lib/stores';
-  import Sidebar from '$lib/components/Sidebar.svelte';
+  import { blocks } from '$lib/vars';
   import { onMount } from 'svelte';
-  import { savePortfolio } from "$lib/functions/portfolio";
+  import Sidebar from '$lib/components/Sidebar.svelte';
+  import Loader from '$lib/components/Loader.svelte';
+
+  async function getTest() {
+    // return await fetch('/api/test');
+  }
 
   onMount(() => {
-    $bar.adaptive = sessionStorage.getItem('adaptive');
-  })
+    if ($bar) {
+      $bar.adaptive = sessionStorage.getItem('adaptive');
+    }
+  });
 
-  //TODO: class Proxy($content[id].component) переделать в Object и сделать JSON.stringify($content)
+  let loading = getTest();
+
   $: adaptive = $bar?.adaptive;
 </script>
 
@@ -36,10 +28,17 @@
   <Sidebar/>
   <main class="overflow-y-auto w-full bg-white p-8">
     <div class={(adaptive ?? 'max-w-[1920px]') + ' mx-auto duration-200'}>
-      <button on:click={ savePortfolio }>click</button>
-      {#each $content as { component, id }}
-        <svelte:component this={component} {id}/>
-      {/each}
+      {#await loading}
+        <Loader/>
+      {:then result}
+        {#each $content as { componentName, id }}
+          {#if blocks[componentName]}
+            <svelte:component this={blocks[componentName]} {id}/>
+          {/if}
+        {/each}
+      {:catch error}
+        <p>ERROR</p>
+      {/await}
     </div>
   </main>
 </div>

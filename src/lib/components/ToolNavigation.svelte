@@ -1,16 +1,6 @@
 <script lang="ts">
-  import { BarsList, toolsLinks } from '$lib/vars';
+  import { toolsLinks } from '$lib/vars';
   import IconButton from '$lib/components/IconButton.svelte';
-  import Toolbar from '$lib/components/Toolbar.svelte';
-  import EditBar from '$lib/components/EditBar.svelte';
-  import AdaptiveBar from '$lib/components/AdaptiveBar.svelte';
-
-  // FIXME: попробовать вынести в vars.ts
-  export const bars = {
-    [BarsList.toolbar]: Toolbar,
-    [BarsList.editbar]: EditBar,
-    [BarsList.adaptivebar]: AdaptiveBar
-  }
 </script>
 
 
@@ -24,7 +14,7 @@
     {#each toolsLinks as groupToolLinks}
       <div class="grid gap-1">
         {#each groupToolLinks as toolLink}
-          <IconButton {bars} {...toolLink}/>
+          <IconButton {...toolLink}/>
         {/each}
       </div>
     {/each}
