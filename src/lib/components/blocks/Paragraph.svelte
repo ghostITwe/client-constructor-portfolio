@@ -1,14 +1,14 @@
 <script>
   import { bar, content } from '$lib/stores';
   import { toggle } from '$lib/functions/sidebar';
-  import EditBar from '$lib/components/EditBar.svelte';
   import Trash from '$lib/components/Trash.svelte';
+  import { bars, BarsList } from '$lib/vars';
 
   export let id;
 
   // FIXME: перенести в отдельный файл
   function onfocus() {
-    $bar.componentName = EditBar;
+    $bar.component = bars[BarsList.editbar];
     $bar.id = id;
     toggle(true);
   }

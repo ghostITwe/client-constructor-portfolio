@@ -6,7 +6,6 @@
   import Header from "$lib/components/Header.svelte";
 </script>
 
-
 <Header/>
 <main class="font-jetbrains grow">
   <article class="bg-[#3E3E3E80] backdrop-blur-sm shadow-lg rounded-xl text-center max-w-3xl m-auto my-28">
@@ -25,6 +24,7 @@
     </a>
   </article>
   <section class="grid text-white max-w-screen-2xl m-auto gap-60">
+<!--  TODO: автоматизировать вывод  -->
     <article class="grid grid-cols-2 items-center">
       <img src="/assets/images/icons/laravel.svg" alt="laravel" class="w-80 h-80">
       <article>

@@ -3,21 +3,26 @@
 </svelte:head>
 
 <script>
+  import { onMount } from 'svelte';
   import { bar, content } from '$lib/stores';
   import { blocks } from '$lib/vars';
-  import { onMount } from 'svelte';
+  import { getPortfolio } from '$lib/functions/portfolio';
   import Sidebar from '$lib/components/Sidebar.svelte';
   import Loader from '$lib/components/Loader.svelte';
-
-  async function getTest() {
-    // return await fetch('/api/test');
-  }
 
   onMount(() => {
     if ($bar) {
       $bar.adaptive = sessionStorage.getItem('adaptive');
     }
   });
+
+  async function getTest() {
+    const a = await getPortfolio();
+    if (a?.status) {
+      // $content = a?.contentPortfolio ?? [];
+    }
+    console.log(a);
+  }
 
   let loading = getTest();
 
