@@ -20,7 +20,7 @@
     <h2 class="text-6xl text-white mb-7 font-bold mt-20 px-4 leading-[5rem]">Конструктор портфолио</h2>
     <a href="/registration"
        class="inline-block text-4xl text-white border-2 border-white py-2.5 px-10 rounded-2xl shadow-md shadow-white mb-24 hover:bg-[#0019F5] duration-200">
-      Регистрация »
+      Создать портфолио »
     </a>
   </article>
   <section class="grid text-white max-w-screen-2xl m-auto gap-60">
@@ -80,10 +80,11 @@
     </h2>
     <a href="/registration"
        class="inline-block text-4xl text-white border-2 border-white py-2.5 px-10 rounded-2xl shadow-md shadow-white hover:bg-[#0019F5] duration-200">
-      Регистрация »
+      Создать »
     </a>
   </article>
 </main>
 <footer class="p-4 bg-[#464646] mt-12">
+  <a href="/privacy" class="text-white text-center font-thin block w-fit m-auto">Политика в отношении обработки персональных данных</a>
   <p class="text-white text-center text-xl font-thin">© 2022 LEAFSTOCK</p>
 </footer>
