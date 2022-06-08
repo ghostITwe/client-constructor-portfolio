@@ -1,13 +1,13 @@
 <script>
   import { bar, content } from '$lib/stores';
+  import { bars, BarsList } from '$lib/vars';
   import { toggle } from '$lib/functions/sidebar';
-  import EditBar from '$lib/components/EditBar.svelte';
   import Trash from '$lib/components/Trash.svelte';
 
   export let id;
 
   function onfocus() {
-    $bar.componentName = EditBar;
+    $bar.component = bars[BarsList.editbar];
     $bar.id = id;
     toggle(true);
   }

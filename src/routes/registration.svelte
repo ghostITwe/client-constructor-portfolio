@@ -1,26 +1,30 @@
+<svelte:head>
+  <title>Регистрация</title>
+</svelte:head>
+
 <script>
-    import Form from "$lib/components/Form.svelte";
-    import Field from "$lib/components/Field.svelte";
-    import Button from "$lib/components/Button.svelte";
-    import Link from "$lib/components/Link.svelte";
-    import Header from "$lib/components/Header.svelte";
+  import Form from "$lib/components/Form.svelte";
+  import Field from "$lib/components/Field.svelte";
+  import Button from "$lib/components/Button.svelte";
+  import Link from "$lib/components/Link.svelte";
+  import Header from "$lib/components/Header.svelte";
 
-    $: errors = [];
+  $: errors = [];
 
-    async function signUp(body) {
-        let response = await fetch("api/registration.json", {
-            method: 'POST',
-            body: JSON.stringify(body)
-        });
+  async function signUp(body) {
+    const response = await fetch("api/registration.json", {
+      method: 'POST',
+      body: JSON.stringify(body)
+    });
 
-        if (response.ok) {
-            let result = await response.json();
-            localStorage.setItem('token', result.token);
-            window.location.href = '/portfolio';
-        } else {
-            errors = Object.values((await response.json())?.errors);
-        }
+    if (response.ok) {
+      const result = await response.json();
+      localStorage.setItem('token', result.token);
+      window.location.href = '/portfolio';
+    } else {
+      errors = Object.values((await response.json())?.errors);
     }
+  }
 </script>
 
 <Header type="cut"/>
@@ -39,6 +43,15 @@
        };
        signUp(body);
   }}>
+    {#if errors}
+      <div class="bg-red-400 text-white rounded">
+        {#each errors as error }
+          {#each error as message }
+            <p class="px-8 py-2">{message}</p>
+          {/each}
+        {/each}
+      </div>
+    {/if}
     <Field id="email" placeholder="Эл.почта" type="text"/>
     <Field id="password" placeholder="Пароль" type="password"/>
     <Field id="password_confirmation" placeholder="Повторите пароль" type="password"/>

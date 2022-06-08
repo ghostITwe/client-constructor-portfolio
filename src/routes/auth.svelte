@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>Вход</title>
+</svelte:head>
+
 <script>
   import Form from "$lib/components/Form.svelte";
   import Field from "$lib/components/Field.svelte";
@@ -8,19 +12,18 @@
   $: errors = [];
 
   async function signIn(body) {
+    const response = await fetch("api/auth.json", {
+      method: 'POST',
+      body: JSON.stringify(body)
+    });
 
-      let response = await fetch("api/auth.json", {
-          method: 'POST',
-          body: JSON.stringify(body)
-      });
-
-      if (response.ok) {
-          let result = await response.json();
-          localStorage.setItem('token', result.token);
-          window.location.href = '/portfolio';
-      } else {
-          errors = Object.values((await response.json())?.errors);
-      }
+    if (response.ok) {
+      const result = await response.json();
+      localStorage.setItem('token', result.token);
+      window.location.href = '/portfolio';
+    } else {
+      errors = Object.values((await response.json())?.errors);
+    }
   }
 </script>
 
@@ -31,14 +34,8 @@
     Ещё нет аккаунта?
     <Link href="/registration">Создать</Link>
   </p>
-<!--  TODO: сделать стили для ошибок -->
-  {#if errors}
-    {#each errors as error }
-      {#each error as message }
-        <p>{message}</p>
-      {/each}
-    {/each}
-  {/if}
+
+  <!-- TODO: возможно можно переделать -->
   <Form method="post" on:submit={(e) => {
       e.preventDefault();
       const body = {
@@ -47,6 +44,16 @@
       };
       signIn(body);
   }}>
+    <!--  TODO: сделать стили для ошибок -->
+    {#if errors}
+      <div class="bg-red-400 text-white rounded">
+        {#each errors as error }
+          {#each error as message }
+            <p class="px-8 py-2">{message}</p>
+          {/each}
+        {/each}
+      </div>
+    {/if}
     <Field id="email" placeholder="Почта" type="text"/>
     <div class="grid gap-4">
       <Field id="password" placeholder="Пароль" type="password"/>

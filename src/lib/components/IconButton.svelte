@@ -3,7 +3,11 @@
   import { bars } from '$lib/vars';
   import { toggle } from '$lib/functions/sidebar';
 
-  export let after, negative, componentName, src, onclick;
+  // FIXME: убрать items по возможности
+  export let after, negative, src,
+      onclick = null,
+      componentName = '',
+      items = null;
 </script>
 
 <button {after} on:click={() => {

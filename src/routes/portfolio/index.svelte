@@ -4,7 +4,7 @@
 
 <script>
   import { onMount } from 'svelte';
-  import { bar, content } from '$lib/stores';
+  import { bar, content, freeId } from '$lib/stores';
   import { blocks } from '$lib/vars';
   import { getPortfolio } from '$lib/functions/portfolio';
   import Sidebar from '$lib/components/Sidebar.svelte';
@@ -21,6 +21,10 @@
     // FIXME: попробовать вынести в саму функцию
     if (portfolio?.status) {
       $content = portfolio?.contentPortfolio ?? [];
+      // FIXME: переделать
+      if ($content.length) {
+        $freeId = $content[$content.length - 1].id + 1;
+      }
     }
   }
 

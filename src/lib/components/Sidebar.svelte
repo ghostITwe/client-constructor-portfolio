@@ -18,7 +18,7 @@
          after:block after:content-[''] after:w-px after:absolute after:top-0 after:bottom-0 after:bg-transparent after:shadow-[0_0_11px_0_#fff8]
     ">
     <div class="grid p-6 pl-8 gap-6 overflow-y-scroll no-scrollbar h-full content-start">
-      <!--  TODO: попробовать сделать динамическим атрибут - props={$content[$bar.id]?.props}  -->
+<!-- FIXME: заменить на bars[$bar.componentName] -->
       <svelte:component this={$bar.component}/>
     </div>
 

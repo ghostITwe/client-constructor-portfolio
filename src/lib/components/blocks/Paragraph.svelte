@@ -1,8 +1,8 @@
 <script>
   import { bar, content } from '$lib/stores';
+  import { bars, BarsList } from '$lib/vars';
   import { toggle } from '$lib/functions/sidebar';
   import Trash from '$lib/components/Trash.svelte';
-  import { bars, BarsList } from '$lib/vars';
 
   export let id;
 
