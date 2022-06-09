@@ -35,11 +35,15 @@
       {#if typeof isAuth === 'boolean'}
         {#if isAuth}
           <button class="cursor-pointer" on:click={() => {
-          localStorage.removeItem('username');
-          localStorage.removeItem('token');
-          isAuth = false;
-        }}>Выход
-          </button>
+            fetch(`${import.meta.env.VITE_BASE_URL}/api/logout`, {
+              headers: {
+                authorization: 'Bearer ' + localStorage.getItem('token')
+              }
+            });
+            localStorage.removeItem('username');
+            localStorage.removeItem('token');
+            isAuth = false;
+          }}>Выход</button>
         {:else}
           <a href="/auth">Вход</a>
         {/if}

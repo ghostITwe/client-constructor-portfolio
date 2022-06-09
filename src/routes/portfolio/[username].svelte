@@ -36,6 +36,8 @@
 
         return portfolio?.editAccess;
       }
+    } else {
+      throw response;
     }
   }
 
@@ -62,7 +64,10 @@
 
       </div>
     </main>
-  {:catch error}
-    <p>ERROR</p>
+  {:catch { status, statusText }}
+    <div class="m-auto">
+      <h1 class="p-4 text-8xl text-center text-gray-300 dark:text-gray-700">{status}</h1>
+      <p class="p-4 text-xl sm:text-4xl text-center text-gray-800 dark:text-gray-300">{statusText}</p>
+    </div>
   {/await}
 </div>

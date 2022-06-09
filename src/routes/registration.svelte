@@ -3,6 +3,7 @@
 </svelte:head>
 
 <script>
+  import { onMount } from 'svelte';
   import Form from '$lib/components/Form.svelte';
   import Field from '$lib/components/Field.svelte';
   import Button from '$lib/components/Button.svelte';
@@ -10,6 +11,14 @@
   import Header from '$lib/components/Header.svelte';
 
   $: errors = [];
+
+  onMount(() => {
+    const username = localStorage.getItem('username') ?? '';
+
+    if (localStorage.getItem('token') && username) {
+      location.href = `/portfolio/${username}`;
+    }
+  });
 
   async function signUp(body) {
     const response = await fetch('/api/registration.json', {
@@ -19,6 +28,7 @@
 
     if (response.ok) {
       const result = await response.json();
+      fetch('');
       localStorage.setItem('token', result.token);
       localStorage.setItem('username', result.username);
       window.location.href = `/portfolio/${result.username}`;
