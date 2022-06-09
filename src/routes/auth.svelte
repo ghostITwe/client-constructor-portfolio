@@ -4,22 +4,24 @@
 
 <script>
   import { onMount } from 'svelte';
-  import Form from "$lib/components/Form.svelte";
-  import Field from "$lib/components/Field.svelte";
-  import Button from "$lib/components/Button.svelte";
-  import Link from "$lib/components/Link.svelte";
-  import Header from "$lib/components/Header.svelte";
+  import Form from '$lib/components/Form.svelte';
+  import Field from '$lib/components/Field.svelte';
+  import Button from '$lib/components/Button.svelte';
+  import Link from '$lib/components/Link.svelte';
+  import Header from '$lib/components/Header.svelte';
 
   $: errors = [];
 
   onMount(() => {
-    if (localStorage.getItem('token')) {
-      location.href = '/portfolio';
+    const username = localStorage.getItem('username') ?? '';
+
+    if (localStorage.getItem('token') && username) {
+      location.href = `/portfolio/${username}`;
     }
   });
 
   async function signIn(body) {
-    const response = await fetch("api/auth.json", {
+    const response = await fetch('/api/auth.json', {
       method: 'POST',
       body: JSON.stringify(body)
     });
@@ -27,7 +29,8 @@
     if (response.ok) {
       const result = await response.json();
       localStorage.setItem('token', result.token);
-      window.location.href = '/portfolio';
+      localStorage.setItem('username', result.username);
+      window.location.href = `/portfolio/${result.username}`;
     } else {
       errors = Object.values((await response.json())?.errors);
     }
@@ -65,6 +68,7 @@
     <div class="grid gap-4">
       <Field id="password" placeholder="Пароль" type="password"/>
       <div class="flex justify-between font-thin">
+<!-- TODO: сохранение в local и session storages -->
         <Field id="remember" type="checkbox">Запомнить меня</Field>
         <Link>Забыли почту или пароль?</Link>
       </div>

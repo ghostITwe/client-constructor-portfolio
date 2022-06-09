@@ -5,9 +5,7 @@
   import ToolNavigation from '$lib/components/ToolNavigation.svelte';
 
   // FIXME: удалить и закрыть при старте страницы панель
-  $bar = {
-    component: bars[BarsList.toolbar]
-  };
+  $bar.component = bars[BarsList.toolbar];
 </script>
 
 <aside class="relative">

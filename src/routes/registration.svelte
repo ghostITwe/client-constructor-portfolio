@@ -3,16 +3,16 @@
 </svelte:head>
 
 <script>
-  import Form from "$lib/components/Form.svelte";
-  import Field from "$lib/components/Field.svelte";
-  import Button from "$lib/components/Button.svelte";
-  import Link from "$lib/components/Link.svelte";
-  import Header from "$lib/components/Header.svelte";
+  import Form from '$lib/components/Form.svelte';
+  import Field from '$lib/components/Field.svelte';
+  import Button from '$lib/components/Button.svelte';
+  import Link from '$lib/components/Link.svelte';
+  import Header from '$lib/components/Header.svelte';
 
   $: errors = [];
 
   async function signUp(body) {
-    const response = await fetch("api/registration.json", {
+    const response = await fetch('/api/registration.json', {
       method: 'POST',
       body: JSON.stringify(body)
     });
@@ -20,7 +20,8 @@
     if (response.ok) {
       const result = await response.json();
       localStorage.setItem('token', result.token);
-      window.location.href = '/portfolio';
+      localStorage.setItem('username', result.username);
+      window.location.href = `/portfolio/${result.username}`;
     } else {
       errors = Object.values((await response.json())?.errors);
     }

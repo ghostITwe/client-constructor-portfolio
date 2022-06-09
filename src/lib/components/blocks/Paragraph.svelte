@@ -4,7 +4,7 @@
   import { toggle } from '$lib/functions/sidebar';
   import Trash from '$lib/components/Trash.svelte';
 
-  export let id;
+  export let id, editable;
 
   // FIXME: перенести в отдельный файл
   function onfocus() {
@@ -16,10 +16,16 @@
   $: index = $content.findIndex(el => el.id === id);
 </script>
 
-<div tabindex="0" on:focus={onfocus}
-     class="group relative p-4 rounded-3xl duration-100 cursor-pointer border-2 border-transparent ring-blue-300/30
+{#if editable}
+  <div tabindex="0" on:focus={onfocus}
+       class="group relative p-4 rounded-3xl duration-100 cursor-pointer border-2 border-transparent ring-blue-300/30
         hover:ring-2 hover:border-white
         focus:border-white focus:backdrop-blur-md focus:bg-blue-100/80 focus:ring-4">
-  <p class="w-full min-h-[1rem]">{$content[index]?.props.text ?? ''}</p>
-  <Trash {index}/>
-</div>
+    <p class="w-full min-h-[1rem]">{$content[index]?.props.text ?? ''}</p>
+    <Trash {index}/>
+  </div>
+{:else}
+  <div class="p-4 rounded-3xl border-2 border-transparent">
+    <p>{$content[index]?.props.text ?? ''}</p>
+  </div>
+{/if}

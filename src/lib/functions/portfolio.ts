@@ -1,10 +1,10 @@
-import { content } from '$lib/stores';
 import { get } from 'svelte/store';
+import { content } from '$lib/stores';
 
 export async function savePortfolio() {
-  let contentValue = get(content);
+  const contentValue = get(content);
 
-  let response = await fetch("api/portfolio.json", {
+  const response = await fetch('/api/portfolio.json', {
     method: 'POST',
     headers: {
       'Authorization': 'Bearer ' + localStorage.getItem('token')
@@ -12,18 +12,5 @@ export async function savePortfolio() {
     body: JSON.stringify({contentValue})
   });
 
-  let res = await response.json();
-}
-
-export async function getPortfolio() {
-  let response = await fetch("api/portfolio.json", {
-    method: 'GET',
-    headers: {
-      'Authorization': 'Bearer ' + localStorage.getItem('token')
-    }
-  });
-
-  if (response.ok) {
-    return await response.json();
-  }
+  // let res = await response.json();
 }
