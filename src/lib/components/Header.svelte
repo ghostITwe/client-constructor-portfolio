@@ -35,6 +35,7 @@
       {#if typeof isAuth === 'boolean'}
         {#if isAuth}
           <button class="cursor-pointer" on:click={() => {
+          localStorage.removeItem('username');
           localStorage.removeItem('token');
           isAuth = false;
         }}>Выход
