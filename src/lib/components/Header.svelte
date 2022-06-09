@@ -1,6 +1,14 @@
 <script>
+  import { onMount } from 'svelte';
 
-  export let type;
+  export let type = undefined;
+
+  $: isAuth = undefined;
+
+  onMount(() => {
+    isAuth = !!localStorage.getItem('token');
+  })
+
   let logo = '';
 
   // FIXME: Переделать
@@ -23,7 +31,18 @@
   <a href="/" class="cursor-underscore text-2xl text-white font-bold ml-32">{logo}</a>
   {#if type !== 'cut'}
     <nav class="flex items-center text-white text-xl gap-8">
-      <a href="/auth">Вход</a>
+      <!-- FIXME: переписать -->
+      {#if typeof isAuth === 'boolean'}
+        {#if isAuth}
+          <button class="cursor-pointer" on:click={() => {
+          localStorage.removeItem('token');
+          isAuth = false;
+        }}>Выход
+          </button>
+        {:else}
+          <a href="/auth">Вход</a>
+        {/if}
+      {/if}
       <a href="#"><img src="assets/switch.svg" alt="switchTheme" class="w-8"></a>
     </nav>
   {/if}

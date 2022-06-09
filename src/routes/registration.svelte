@@ -45,8 +45,8 @@
   }}>
     {#if errors}
       <div class="bg-red-400 text-white rounded">
-        {#each errors as error }
-          {#each error as message }
+        {#each errors as error}
+          {#each error as message}
             <p class="px-8 py-2">{message}</p>
           {/each}
         {/each}

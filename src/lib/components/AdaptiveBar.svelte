@@ -6,43 +6,46 @@
     sessionStorage.setItem('adaptive', size ?? '');
   }
 
-//  TODO: автоматизировать
+  const info = [{
+    name: 'Исходный',
+    className: 'max-w-screen-xl',
+    size: 'Без ограничений',
+    src: ''
+  }, {
+    name: 'xl',
+    className: 'max-w-screen-xl',
+    size: '1280px',
+    src: '/assets/images/icons/adaptivebar/computer.svg'
+  }, {
+    name: 'lg',
+    className: 'max-w-screen-lg',
+    size: '1024px',
+    src: '/assets/images/icons/adaptivebar/laptop.svg'
+  }, {
+    name: 'md',
+    className: 'max-w-screen-md',
+    size: '768px',
+    src: '/assets/images/icons/adaptivebar/tablet.svg'
+  }, {
+    name: 'sm',
+    className: 'max-w-screen-sm',
+    size: '640px',
+    src: '/assets/images/icons/adaptivebar/phone.svg'
+  }];
+
 </script>
 
 <section class="grid w-80 gap-5 text-white">
   <h3 class="text-2xl pl-4">Адаптив</h3>
-  <article class="h-28 flex border border-white rounded cursor-pointer" on:click={() => switchAdaptive()}>
-    <div class="m-auto text-center">
-      <p class="text-lg">Исходный</p>
-      <p class="font-light">Без ограничений</p>
-    </div>
-  </article>
-  <article class="h-28 flex border border-white rounded cursor-pointer" on:click={() => switchAdaptive('max-w-screen-xl')}>
-    <img class="p-8 border border border-white rounded" src="/assets/images/icons/adaptivebar/computer.svg" alt="">
-    <div class="m-auto text-center">
-      <p class="text-lg">xl</p>
-      <p class="font-light">1280px</p>
-    </div>
-  </article>
-  <article class="h-28 flex border border-white rounded cursor-pointer" on:click={() => switchAdaptive('max-w-screen-lg')}>
-    <img class="p-8 border border border-white rounded" src="/assets/images/icons/adaptivebar/laptop.svg" alt="">
-    <div class="m-auto text-center">
-      <p class="text-lg">lg</p>
-      <p class="font-light">1024px</p>
-    </div>
-  </article>
-  <article class="h-28 flex border border-white rounded cursor-pointer" on:click={() => switchAdaptive('max-w-screen-md')}>
-    <img class="p-8 border border border-white rounded" src="/assets/images/icons/adaptivebar/tablet.svg" alt="">
-    <div class="m-auto text-center">
-      <p class="text-lg">md</p>
-      <p class="font-light">768px</p>
-    </div>
-  </article>
-  <article class="h-28 flex border border-white rounded cursor-pointer" on:click={() => switchAdaptive('max-w-screen-sm')}>
-    <img class="p-8 border border border-white rounded" src="/assets/images/icons/adaptivebar/phone.svg" alt="">
-    <div class="m-auto text-center">
-      <p class="text-lg">sm</p>
-      <p class="font-light">640px</p>
-    </div>
-  </article>
+  {#each info as { name, className, size, src }}
+    <article class="h-28 flex border border-white rounded cursor-pointer" on:click={() => switchAdaptive(className)}>
+      {#if src}
+        <img class="p-8 border border border-white rounded" {src} alt="">
+      {/if}
+      <div class="m-auto text-center">
+        <p class="text-lg">{name}</p>
+        <p class="font-light">{size}</p>
+      </div>
+    </article>
+  {/each}
 </section>

@@ -57,7 +57,6 @@ export const toolsLinks: IToolLink[][] = [[{
   src: '/assets/images/icons/toolbar/templateIcon.svg',
   negative: '/assets/images/icons/toolbar/negativeTemplateIcon.svg',
   after: 'Шаблоны',
-  componentName: BarsList.editbar
 }, {
   src: '/assets/images/icons/toolbar/addIcon.svg',
   negative: '/assets/images/icons/toolbar/negativeAddIcon.svg',
@@ -99,6 +98,11 @@ export const toolsLinks: IToolLink[][] = [[{
   negative: '/assets/images/icons/toolbar/negativeAdaptiveIcon.svg',
   after: 'Адаптив',
   componentName: BarsList.adaptivebar
+}, {
+  src: '/assets/images/icons/toolbar/editIcon.svg',
+  negative: '/assets/images/icons/toolbar/negativeEditIcon.svg',
+  after: 'Свойства',
+  componentName: BarsList.editbar
 }], [{
   src: '/assets/images/icons/toolbar/viewIcon.svg',
   negative: '/assets/images/icons/toolbar/negativeViewIcon.svg',

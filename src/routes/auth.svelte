@@ -3,6 +3,7 @@
 </svelte:head>
 
 <script>
+  import { onMount } from 'svelte';
   import Form from "$lib/components/Form.svelte";
   import Field from "$lib/components/Field.svelte";
   import Button from "$lib/components/Button.svelte";
@@ -10,6 +11,12 @@
   import Header from "$lib/components/Header.svelte";
 
   $: errors = [];
+
+  onMount(() => {
+    if (localStorage.getItem('token')) {
+      location.href = '/portfolio';
+    }
+  });
 
   async function signIn(body) {
     const response = await fetch("api/auth.json", {
@@ -47,8 +54,8 @@
     <!--  TODO: сделать стили для ошибок -->
     {#if errors}
       <div class="bg-red-400 text-white rounded">
-        {#each errors as error }
-          {#each error as message }
+        {#each errors as error}
+          {#each error as message}
             <p class="px-8 py-2">{message}</p>
           {/each}
         {/each}
